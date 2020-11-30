@@ -71,7 +71,7 @@ class SignupForm extends Model
                 ['html' => 'emailVerify-html', 'text' => 'emailVerify-text'],
                 ['user' => $user]
             )
-            ->setFrom('phamthidieulinh24102000@gmail.com')
+            ->setFrom('nhom14.se05@gmail.com')
             ->setTo($this->email)
             ->setSubject('Account registration at ' . Yii::$app->name)
             ->send();
