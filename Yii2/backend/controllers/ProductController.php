@@ -36,6 +36,7 @@ class ProductController extends Controller
                             $control = Yii::$app->controller->id;
                             $action = Yii::$app->controller->action->id;
                             $role = $action.'-'.$control;
+                            return true;
                             if (Yii::$app->user->can($role)) {
                                 return true;
                             }
@@ -46,7 +47,6 @@ class ProductController extends Controller
             'verbs' => [
                 'class' => VerbFilter::className(),
                 'actions' => [
-                    'delete' => ['POST'],
                     'logout' => ['post'],
                 ],
             ],
@@ -58,6 +58,18 @@ class ProductController extends Controller
      * @return mixed
      */
     public function actionIndex()
+    {
+        $searchModel = new ProductSearch();
+        $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+
+        return $this->render('index', [
+            'searchModel' => $searchModel,
+            'dataProvider' => $dataProvider,
+        ]);
+    }
+
+
+    public function actionTest()
     {
         $searchModel = new ProductSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
@@ -86,38 +98,57 @@ class ProductController extends Controller
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
      */
+
+    public function actionModel($id)
+    {
+        
+        return  $this->render('modelviewer', ['model' => $this->findModel($id)]);
+    }
+
     public function actionCreate()
     {
         $model = new Product();
 
         if ($model->load(Yii::$app->request->post())) {
-            $fileName = $model->productname;
-            if (UploadedFile::getInstance($model, 'file')) {
-                $model->file = UploadedFile::getInstance($model, 'file');
-                $model->file->saveAs('uploads/'.$fileName.'.'.$model->file->extension);
-                $model->direction = 'uploads/'.$fileName.'.'.$model->file->extension;
-                $model->created_at = time();
-                $model->created_by = Yii::$app->user->identity->username;
-                //$model->created_at = date('Y-m-d h:m:s');
-                if ($model->save()) {
-                    return $this->redirect(['view', 'id' => $model->id]);
-                } else {
-                    return $this->render('create', [
-                        'model' => $model,
-                    ]);
-                }
+
+            $model->glbFile = UploadedFile::getInstance($model, 'glbFile');
+            if ($model->glbFile) {
+                // $dir = $model->id;
+                // if( is_dir($dir) === false )
+                // {
+                //     mkdir($dir, 0777);
+                // }
+                $model->glbFile->saveAs('uploads/models/'.$model->id.$model->glbFile->name);
+                $model->model = 'uploads/models/'.$model->id.$model->glbFile->name;
+            }
+
+            $model->thumbnail_image = UploadedFile::getInstance($model, 'thumbnail_image');
+            if ($model->thumbnail_image) {
+                $model->thumbnail_image->saveAs('uploads/thumbnails/'.$model->thumbnail_image->name);
+                $model->thumbnail = 'uploads/thumbnails/'.$model->thumbnail_image->name;
+            }
+
+            $model->hdrFile = UploadedFile::getInstance($model, 'hdrFile');
+            if ($model->hdrFile) {
+                $model->hdrFile->saveAs('uploads/hdr/'.$model->hdrFile->name);
+                $model->environment = 'uploads/hdr/'.$model->hdrFile->name;
+            }
+
+            $model->created_at = time();
+            $model->created_by = Yii::$app->user->identity->username;
+
+            if ($model->save(false)) {
+                return $this->redirect(['view', 'id' => $model->id]);
             } else {
                 return $this->render('create', [
                     'model' => $model,
                 ]);
             }
-            
-            
+        } else {
+            return $this->render('create', [
+                'model' => $model,
+            ]);
         }
-
-        return $this->render('create', [
-            'model' => $model,
-        ]);
     }
 
     /**

@@ -21,11 +21,17 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'description') ?>
 
-    <?= $form->field($model, 'direction') ?>
+    <?= $form->field($model, 'thumbnail') ?>
 
-    <?= $form->field($model, 'created_at') ?>
+    <?= $form->field($model, 'model') ?>
 
-    <?= $form->field($model, 'created_by') ?>
+    <?php // echo $form->field($model, 'snipet') ?>
+
+    <?php // echo $form->field($model, 'environment') ?>
+
+    <?php // echo $form->field($model, 'embedcode') ?>
+
+    <?php // echo $form->field($model, 'created_at') ?>
 
     <?php // echo $form->field($model, 'created_by') ?>
 

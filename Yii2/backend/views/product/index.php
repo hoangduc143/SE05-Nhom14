@@ -28,12 +28,14 @@ $this->params['breadcrumbs'][] = $this->title;
                 'header' => 'STT'
             ],
 
-            
-
             'id',
             'productname',
             'description',
-            'direction',
+            'thumbnail',
+            'model',
+            'snipet',
+            'environment',
+            'embedcode',
             [
                 'attribute' => 'created_at',
                 'content' => function($model) {
@@ -48,7 +50,14 @@ $this->params['breadcrumbs'][] = $this->title;
                 }
             ],
 
-            ['class' => 'yii\grid\ActionColumn'],
+            ['class' => 'yii\grid\ActionColumn',
+                'buttons' => [
+                    'view3d' => function($url, $model) {
+                        return Html::a('View3d', $url, ['class' => 'btn btn-xs btn-primary']);
+                    },
+                ]
+        
+            ],
         ],
     ]); ?>
 

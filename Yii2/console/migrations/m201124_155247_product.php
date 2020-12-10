@@ -19,7 +19,11 @@ class m201124_155247_product extends Migration
             'id' => $this->primaryKey(),
             'productname' => $this->string()->notNull()->unique(),
             'description' => $this->string()->notNull(),
-            'direction' => $this->string()->notNull()->unique(),
+            'thumbnail' => $this->string()->notNull(),
+            'model' => $this->string()->notNull()->unique(),
+            'snipet' => $this->string()->notNull(),
+            'environment' => $this->string()->notNull(),
+            'embedcode' => $this->string()->notNull(),
             'created_at' => $this->integer()->notNull(),
             'created_by' => $this->string()->notNull(),
         ], $tableOptions);

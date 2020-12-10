@@ -32,10 +32,21 @@ $this->params['breadcrumbs'][] = $this->title;
             'id',
             'productname',
             'description',
-            'direction',
+            [
+                'attributes' => 'thumbnail',
+                'label' => 'Thumbnail',
+                'format' => 'image',
+        
+                'value' => Yii::getAlias('@web').'/'.$model->thumbnail
+            ],
+            'model',
+            'snipet',
+            'environment',
+            'embedcode',
             'created_at',
             'created_by',
         ],
+        
     ]) ?>
 
 </div>
