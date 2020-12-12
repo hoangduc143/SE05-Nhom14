@@ -47,14 +47,17 @@
 
 <body>
 
-    <img src="http://localhost/yii2/backend/web/uploads/thumbnails/poster.png">
+    <?php
+        use yii\helpers\Html;
+    ?>    
 
-    <model-viewer id="model_viewer" ar ar-scale="auto" camera-controls src="http://localhost/yii2/backend/web/uploads/models/cube.glb" 
-                  poster="http://localhost/yii2/backend/web/uploads/thumbnails/poster.png" camera-orbit="-60deg 60deg 10m" field-of-view="45deg" exposure="1.5" shadow-intensity="1.5" shadow-softness="1">
+    <img src="<?=Yii::getAlias('@web').'/'.$model->thumbnail?>">
+
+    <model-viewer id="model_viewer" ar ar-scale="auto" camera-controls src="<?=Yii::getAlias('@web').'/'.$model->model?>" camera-orbit="-60deg 60deg 10m" field-of-view="45deg" exposure="1.5" shadow-intensity="1.5" shadow-softness="1">
 
     </model-viewer>
 
-    <!-- <model-viewer src="http://localhost/yii2/backend/web/uploads/models/cube.glb" alt="A 3D model of an astronaut" auto-rotate camera-controls></model-viewer> -->
+    <!-- <model-viewer src="<?=Yii::getAlias('@web').'/'.$model->model?>" alt="A 3D model of an astronaut" auto-rotate camera-controls></model-viewer> -->
 
 
 </body>

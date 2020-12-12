@@ -3,7 +3,7 @@
 /* @var $this yii\web\View */
 use yii\helpers\Html;
 
-// $this->title = 'My Yii Application';
+$this->title = 'My Yii Application';
 
 // $this->params['breadcrumbs'][] = ['label' => 'Products', 'url' => ['/product/index']];
 // $this->params['breadcrumbs'][] = $this->title;
@@ -12,6 +12,10 @@ use yii\helpers\Html;
 
 <p>
     <?= Html::a('Product', ['/product/index'], ['class' => 'btn btn-success']) ?>
+</p>
+
+<p>
+    <?= Html::a('Model3d', ['/product/model', 'id' => 24], ['class' => 'btn btn-success']) ?>
 </p>
 
 <!-- <div class="site-index">

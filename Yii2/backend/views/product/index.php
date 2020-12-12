@@ -51,12 +51,12 @@ $this->params['breadcrumbs'][] = $this->title;
             ],
 
             ['class' => 'yii\grid\ActionColumn',
+                
                 'buttons' => [
-                    'view3d' => function($url, $model) {
-                        return Html::a('View3d', $url, ['class' => 'btn btn-xs btn-primary']);
+                    'model' => function ($url, $model, $key) {
+                        return Html::a('View3D', $url, ['class' => 'btn btn-success']);
                     },
                 ]
-        
             ],
         ],
     ]); ?>

@@ -118,8 +118,8 @@ class ProductController extends Controller
                 // {
                 //     mkdir($dir, 0777);
                 // }
-                $model->glbFile->saveAs('uploads/models/'.$model->id.$model->glbFile->name);
-                $model->model = 'uploads/models/'.$model->id.$model->glbFile->name;
+                $model->glbFile->saveAs('uploads/models/'.$model->glbFile->name);
+                $model->model = 'uploads/models/'.$model->glbFile->name;
             }
 
             $model->thumbnail_image = UploadedFile::getInstance($model, 'thumbnail_image');
