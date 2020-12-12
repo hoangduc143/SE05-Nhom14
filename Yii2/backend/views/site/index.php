@@ -14,10 +14,6 @@ $this->title = 'My Yii Application';
     <?= Html::a('Product', ['/product/index'], ['class' => 'btn btn-success']) ?>
 </p>
 
-<p>
-    <?= Html::a('Model3d', ['/product/model', 'id' => 24], ['class' => 'btn btn-success']) ?>
-</p>
-
 <!-- <div class="site-index">
 
     <div class="jumbotron">
