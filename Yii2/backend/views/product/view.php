@@ -42,7 +42,7 @@ $this->params['breadcrumbs'][] = $this->title;
             'model',
             'snipet',
             'environment',
-            'embedcode',
+            // 'embedcode',
             'created_at',
             'created_by',
         ],

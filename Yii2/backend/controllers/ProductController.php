@@ -128,6 +128,11 @@ class ProductController extends Controller
                 $model->thumbnail = 'uploads/thumbnails/'.$model->thumbnail_image->name;
             }
 
+            $snippet = $model->snipet;
+            $snippet_file = fopen('uploads/snippets/'.$model->productname.$model->id.'.txt', "w+");
+            fwrite($snippet_file, $snippet);
+            $model->snipet = 'uploads/snippets/'.$model->productname.$model->id.'.txt';
+
             $model->hdrFile = UploadedFile::getInstance($model, 'hdrFile');
             if ($model->hdrFile) {
                 $model->hdrFile->saveAs('uploads/hdr/'.$model->hdrFile->name);
@@ -138,6 +143,7 @@ class ProductController extends Controller
             $model->created_by = Yii::$app->user->identity->username;
 
             if ($model->save(false)) {
+                fclose($snippet_file);
                 return $this->redirect(['view', 'id' => $model->id]);
             } else {
                 return $this->render('create', [

@@ -45,7 +45,6 @@ class Product extends \yii\db\ActiveRecord
             [['glbFile'], 'file', 'skipOnEmpty' => false, 'extensions' => 'glb', 'maxFiles' => 1],
             [['thumbnail_image'], 'file', 'skipOnEmpty' => false, 'extensions' => 'png, jpg', 'maxFiles' => 1],
             [['hdrFile'], 'file', 'skipOnEmpty' => true, 'extensions' => 'hdr', 'maxFiles' => 1],
-            [['model'], 'unique'],
         ];
     }
 
@@ -56,13 +55,13 @@ class Product extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'productname' => 'Productname',
+            'productname' => 'Product Name',
             'description' => 'Description',
             'thumbnail' => 'Thumbnail',
             'model' => 'Model',
-            'snipet' => 'Snipet',
+            'snipet' => 'Snippet',
             'environment' => 'Environment',
-            'embedcode' => 'Embedcode',
+            // 'embedcode' => 'Embedcode',
             'created_at' => 'Created At',
             'created_by' => 'Created By',
         ];
