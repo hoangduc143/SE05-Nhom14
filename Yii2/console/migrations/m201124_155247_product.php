@@ -20,7 +20,7 @@ class m201124_155247_product extends Migration
             'productname' => $this->string()->notNull()->unique(),
             'description' => $this->string()->notNull(),
             'thumbnail' => $this->string()->notNull(),
-            'model' => $this->string()->notNull()->unique(),
+            'model' => $this->string()->notNull(),
             'snipet' => $this->string()->notNull(),
             'environment' => $this->string()->notNull(),
             'embedcode' => $this->string()->notNull(),

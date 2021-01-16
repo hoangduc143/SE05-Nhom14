@@ -26,7 +26,7 @@ use yii\widgets\ActiveForm;
 
     <?php echo $form->field($model, 'hdrFile')->fileInput() ?>
 
-    <?= $form->field($model, 'embedcode')->textInput(['maxlength' => true]) ?>
+    <?php //echo $form->field($model, 'embedcode')->textInput(['maxlength' => true]) ?>
 
     <div class="form-group">
         <?= Html::submitButton('Save', ['class' => 'btn btn-success']) ?>
