@@ -34,6 +34,7 @@
 
 **Hệ điều hành :**
 - Windows.
+
 **Công cụ hỗ trợ khác:**
 - Xampp.
 
@@ -56,6 +57,7 @@
 ## 6. Cài đặt:
 **Yêu cầu:**
 - Đã cài đặt php, xampp, yii2.
+
 **Cài đặt**
 - Download hoặc clone project về máy.
 - Bật Xampp.
