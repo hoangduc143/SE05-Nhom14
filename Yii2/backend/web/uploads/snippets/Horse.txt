@@ -1,1 +1,1 @@
-<model-viewer src="Horse.glb" camera-controls shadow-intensity="1" autoplay animation-name="horse_A_">  </model-viewer>
+<model-viewer src="Horse.glb" camera-controls shadow-intensity="1" autoplay animation-name="horse_A_" camera-orbit="9.751deg 75deg 475.3m" poster="poster.png">  </model-viewer>

@@ -43,7 +43,11 @@ $this->params['breadcrumbs'][] = $this->title;
             'snipet',
             'environment',
             // 'embedcode',
-            'created_at',
+            [
+                'attributes' => 'created_at',
+                'label' => 'Created At',
+                'value' => date('Y-m-d h:m:s', $model->created_at)
+            ],
             'created_by',
         ],
         
