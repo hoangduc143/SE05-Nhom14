@@ -1,7 +1,7 @@
 # SE05-Nhom14
 # Nhóm 14. Lưu thông tin editor của model-viewer vào 1 server được viết bằng PHP/Yii2/MySQL
 **1.Thành viên:**
-- Tran Hoang Duc  - 18001033 -  K63A5 - HUS
+- Trần Hoàng Đức  - 18001033 -  K63A5 - HUS
 - Nguyễn Minh Kiên - 18001049 - K63A5 - HUS
 - Phạm Thị Diệu Linh - 18001055 - K63A5 - HUS
 
