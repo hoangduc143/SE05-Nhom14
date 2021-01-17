@@ -1,0 +1,805 @@
+2020-11-30 15:43:59 [-][-][-][error][yii\db\Exception] PDOException: SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it.
+ in D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\db\Connection.php:710
+Stack trace:
+#0 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\db\Connection.php(710): PDO->__construct('mysql:host=loca...', 'root', '', NULL)
+#1 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\db\Connection.php(631): yii\db\Connection->createPdoInstance()
+#2 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\db\Connection.php(1030): yii\db\Connection->open()
+#3 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\db\Connection.php(1017): yii\db\Connection->getMasterPdo()
+#4 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\db\Command.php(255): yii\db\Connection->getSlavePdo()
+#5 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\db\Command.php(1154): yii\db\Command->prepare(true)
+#6 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\db\Command.php(401): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\db\mysql\Schema.php(319): yii\db\Command->queryAll()
+#8 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\db\mysql\Schema.php(125): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#9 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\db\Schema.php(757): yii\db\mysql\Schema->loadTableSchema('migration')
+#10 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\db\Schema.php(193): yii\db\Schema->getTableMetadata('{{%migration}}', 'schema', true)
+#11 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\console\controllers\MigrateController.php(211): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#12 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(877): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#13 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(169): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#14 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#15 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#16 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\base\Controller.php(180): yii\base\InlineAction->runWithParams(Array)
+#17 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\console\Controller.php(179): yii\base\Controller->runAction('', Array)
+#18 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\base\Module.php(528): yii\console\Controller->runAction('', Array)
+#19 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\console\Application.php(180): yii\base\Module->runAction('migrate', Array)
+#20 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\console\Application.php(147): yii\console\Application->runAction('migrate', Array)
+#21 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\base\Application.php(386): yii\console\Application->handleRequest(Object(yii\console\Request))
+#22 D:\jsf\htdocs\Yii1\yii(23): yii\base\Application->run()
+#23 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it.
+ in D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\db\Connection.php:642
+Stack trace:
+#0 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\db\Connection.php(1030): yii\db\Connection->open()
+#1 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\db\Connection.php(1017): yii\db\Connection->getMasterPdo()
+#2 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\db\Command.php(255): yii\db\Connection->getSlavePdo()
+#3 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\db\Command.php(1154): yii\db\Command->prepare(true)
+#4 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\db\Command.php(401): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\db\mysql\Schema.php(319): yii\db\Command->queryAll()
+#6 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\db\mysql\Schema.php(125): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#7 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\db\Schema.php(757): yii\db\mysql\Schema->loadTableSchema('migration')
+#8 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\db\Schema.php(193): yii\db\Schema->getTableMetadata('{{%migration}}', 'schema', true)
+#9 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\console\controllers\MigrateController.php(211): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#10 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(877): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#11 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(169): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#12 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#13 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#14 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\base\Controller.php(180): yii\base\InlineAction->runWithParams(Array)
+#15 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\console\Controller.php(179): yii\base\Controller->runAction('', Array)
+#16 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\base\Module.php(528): yii\console\Controller->runAction('', Array)
+#17 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\console\Application.php(180): yii\base\Module->runAction('migrate', Array)
+#18 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\console\Application.php(147): yii\console\Application->runAction('migrate', Array)
+#19 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\base\Application.php(386): yii\console\Application->handleRequest(Object(yii\console\Request))
+#20 D:\jsf\htdocs\Yii1\yii(23): yii\base\Application->run()
+#21 {main}
+Additional Information:
+
+2020-11-30 15:43:55 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'ALLUSERSPROFILE' => 'C:\\ProgramData'
+    'APPDATA' => 'C:\\Users\\admin\\AppData\\Roaming'
+    'ChocolateyInstall' => 'C:\\ProgramData\\chocolatey'
+    'ChocolateyLastPathUpdate' => '132490140860389144'
+    'CommonProgramFiles' => 'C:\\Program Files\\Common Files'
+    'CommonProgramFiles(x86)' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramW6432' => 'C:\\Program Files\\Common Files'
+    'COMPUTERNAME' => 'LAPTOP-2T9NO19N'
+    'ComSpec' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'DriverData' => 'C:\\Windows\\System32\\Drivers\\DriverData'
+    'FPS_BROWSER_APP_PROFILE_STRING' => 'Internet Explorer'
+    'FPS_BROWSER_USER_PROFILE_STRING' => 'Default'
+    'HOMEDRIVE' => 'C:'
+    'HOMEPATH' => '\\Users\\admin'
+    'JAVA_HOME' => 'C:\\Users\\admin\\Downloads\\JDK'
+    'LOCALAPPDATA' => 'C:\\Users\\admin\\AppData\\Local'
+    'LOGONSERVER' => '\\\\LAPTOP-2T9NO19N'
+    'NUMBER_OF_PROCESSORS' => '8'
+    'OneDrive' => 'C:\\Users\\admin\\OneDrive - Hanoi University of Science and Technology'
+    'OneDriveCommercial' => 'C:\\Users\\admin\\OneDrive - Hanoi University of Science and Technology'
+    'OS' => 'Windows_NT'
+    'Path' => 'C:\\Python39\\Scripts\\;C:\\Python39\\;c:\\Program Files\\Java\\jdk1.8.0_191\\bin;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\iCLS\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\iCLS\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\WINDOWS\\System32\\OpenSSH\\;\"C:\\Users\\admin\\Downloads\\JDK\\bin;\";C:\\Program Files\\nodejs\\;C:\\ProgramData\\chocolatey\\bin;C:\\Program Files\\Git\\cmd;D:\\Python\\Scripts\\;D:\\Python\\;C:\\Users\\admin\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\admin\\AppData\\Local\\Programs\\Microsoft VS Code\\bin;C:\\Users\\admin\\AppData\\Local\\GitHubDesktop\\bin;C:\\Program Files\\JetBrains\\WebStorm 2020.2.3\\bin;D:\\jsf\\php;C:\\Users\\admin\\AppData\\Roaming\\npm;C:\\Users\\admin\\AppData\\Local\\atom\\bin'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW'
+    'PHP_COMMAND' => 'php.exe'
+    'PROCESSOR_ARCHITECTURE' => 'AMD64'
+    'PROCESSOR_IDENTIFIER' => 'Intel64 Family 6 Model 142 Stepping 10, GenuineIntel'
+    'PROCESSOR_LEVEL' => '6'
+    'PROCESSOR_REVISION' => '8e0a'
+    'ProgramData' => 'C:\\ProgramData'
+    'ProgramFiles' => 'C:\\Program Files'
+    'ProgramFiles(x86)' => 'C:\\Program Files (x86)'
+    'ProgramW6432' => 'C:\\Program Files'
+    'PROMPT' => '$P$G'
+    'PSModulePath' => 'C:\\Program Files\\WindowsPowerShell\\Modules;C:\\WINDOWS\\system32\\WindowsPowerShell\\v1.0\\Modules'
+    'PUBLIC' => 'C:\\Users\\Public'
+    'RTOOLS40_HOME' => 'C:\\rtools40'
+    'SESSIONNAME' => 'Console'
+    'SystemDrive' => 'C:'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'TEMP' => 'C:\\Users\\admin\\AppData\\Local\\Temp'
+    'TMP' => 'C:\\Users\\admin\\AppData\\Local\\Temp'
+    'USERDOMAIN' => 'LAPTOP-2T9NO19N'
+    'USERDOMAIN_ROAMINGPROFILE' => 'LAPTOP-2T9NO19N'
+    'USERNAME' => 'admin'
+    'USERPROFILE' => 'C:\\Users\\admin'
+    'VBOX_MSI_INSTALL_PATH' => 'C:\\Program Files\\Oracle\\VirtualBox\\'
+    'WebStorm' => 'C:\\Program Files\\JetBrains\\WebStorm 2020.2.3\\bin;'
+    'windir' => 'C:\\WINDOWS'
+    'YII_PATH' => 'D:\\jsf\\htdocs\\Yii1\\'
+    'PHP_SELF' => 'D:\\jsf\\htdocs\\Yii1\\yii'
+    'SCRIPT_NAME' => 'D:\\jsf\\htdocs\\Yii1\\yii'
+    'SCRIPT_FILENAME' => 'D:\\jsf\\htdocs\\Yii1\\yii'
+    'PATH_TRANSLATED' => 'D:\\jsf\\htdocs\\Yii1\\yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1606747435.243
+    'REQUEST_TIME' => 1606747435
+    'argv' => [
+        0 => 'D:\\jsf\\htdocs\\Yii1\\yii'
+        1 => 'migrate'
+        2 => '--migrationPath=@yii/rbac/migrations'
+    ]
+    'argc' => 3
+]
+2020-11-30 16:06:36 [-][-][-][error][yii\base\UnknownMethodException] yii\base\UnknownMethodException: Calling unknown method: yii\rbac\DbManager::updatePermission() in D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\base\Component.php:300
+Stack trace:
+#0 D:\jsf\htdocs\Yii1\console\controllers\RbacController.php(21): yii\base\Component->__call('updatePermissio...', Array)
+#1 [internal function]: console\controllers\RbacController->actionInit()
+#2 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#3 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\base\Controller.php(180): yii\base\InlineAction->runWithParams(Array)
+#4 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\console\Controller.php(179): yii\base\Controller->runAction('init', Array)
+#5 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\base\Module.php(528): yii\console\Controller->runAction('init', Array)
+#6 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\console\Application.php(180): yii\base\Module->runAction('rbac/init', Array)
+#7 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\console\Application.php(147): yii\console\Application->runAction('rbac/init', Array)
+#8 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\base\Application.php(386): yii\console\Application->handleRequest(Object(yii\console\Request))
+#9 D:\jsf\htdocs\Yii1\yii(23): yii\base\Application->run()
+#10 {main}
+2020-11-30 16:06:36 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'ALLUSERSPROFILE' => 'C:\\ProgramData'
+    'APPDATA' => 'C:\\Users\\admin\\AppData\\Roaming'
+    'ChocolateyInstall' => 'C:\\ProgramData\\chocolatey'
+    'ChocolateyLastPathUpdate' => '132490140860389144'
+    'CommonProgramFiles' => 'C:\\Program Files\\Common Files'
+    'CommonProgramFiles(x86)' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramW6432' => 'C:\\Program Files\\Common Files'
+    'COMPUTERNAME' => 'LAPTOP-2T9NO19N'
+    'ComSpec' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'DriverData' => 'C:\\Windows\\System32\\Drivers\\DriverData'
+    'FPS_BROWSER_APP_PROFILE_STRING' => 'Internet Explorer'
+    'FPS_BROWSER_USER_PROFILE_STRING' => 'Default'
+    'HOMEDRIVE' => 'C:'
+    'HOMEPATH' => '\\Users\\admin'
+    'JAVA_HOME' => 'C:\\Users\\admin\\Downloads\\JDK'
+    'LOCALAPPDATA' => 'C:\\Users\\admin\\AppData\\Local'
+    'LOGONSERVER' => '\\\\LAPTOP-2T9NO19N'
+    'NUMBER_OF_PROCESSORS' => '8'
+    'OneDrive' => 'C:\\Users\\admin\\OneDrive - Hanoi University of Science and Technology'
+    'OneDriveCommercial' => 'C:\\Users\\admin\\OneDrive - Hanoi University of Science and Technology'
+    'OS' => 'Windows_NT'
+    'Path' => 'C:\\Python39\\Scripts\\;C:\\Python39\\;c:\\Program Files\\Java\\jdk1.8.0_191\\bin;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\iCLS\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\iCLS\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\WINDOWS\\System32\\OpenSSH\\;\"C:\\Users\\admin\\Downloads\\JDK\\bin;\";C:\\Program Files\\nodejs\\;C:\\ProgramData\\chocolatey\\bin;C:\\Program Files\\Git\\cmd;D:\\Python\\Scripts\\;D:\\Python\\;C:\\Users\\admin\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\admin\\AppData\\Local\\Programs\\Microsoft VS Code\\bin;C:\\Users\\admin\\AppData\\Local\\GitHubDesktop\\bin;C:\\Program Files\\JetBrains\\WebStorm 2020.2.3\\bin;D:\\jsf\\php;C:\\Users\\admin\\AppData\\Roaming\\npm;C:\\Users\\admin\\AppData\\Local\\atom\\bin'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW'
+    'PHP_COMMAND' => 'php.exe'
+    'PROCESSOR_ARCHITECTURE' => 'AMD64'
+    'PROCESSOR_IDENTIFIER' => 'Intel64 Family 6 Model 142 Stepping 10, GenuineIntel'
+    'PROCESSOR_LEVEL' => '6'
+    'PROCESSOR_REVISION' => '8e0a'
+    'ProgramData' => 'C:\\ProgramData'
+    'ProgramFiles' => 'C:\\Program Files'
+    'ProgramFiles(x86)' => 'C:\\Program Files (x86)'
+    'ProgramW6432' => 'C:\\Program Files'
+    'PROMPT' => '$P$G'
+    'PSModulePath' => 'C:\\Program Files\\WindowsPowerShell\\Modules;C:\\WINDOWS\\system32\\WindowsPowerShell\\v1.0\\Modules'
+    'PUBLIC' => 'C:\\Users\\Public'
+    'RTOOLS40_HOME' => 'C:\\rtools40'
+    'SESSIONNAME' => 'Console'
+    'SystemDrive' => 'C:'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'TEMP' => 'C:\\Users\\admin\\AppData\\Local\\Temp'
+    'TMP' => 'C:\\Users\\admin\\AppData\\Local\\Temp'
+    'USERDOMAIN' => 'LAPTOP-2T9NO19N'
+    'USERDOMAIN_ROAMINGPROFILE' => 'LAPTOP-2T9NO19N'
+    'USERNAME' => 'admin'
+    'USERPROFILE' => 'C:\\Users\\admin'
+    'VBOX_MSI_INSTALL_PATH' => 'C:\\Program Files\\Oracle\\VirtualBox\\'
+    'WebStorm' => 'C:\\Program Files\\JetBrains\\WebStorm 2020.2.3\\bin;'
+    'windir' => 'C:\\WINDOWS'
+    'YII_PATH' => 'D:\\jsf\\htdocs\\Yii1\\'
+    'PHP_SELF' => 'D:\\jsf\\htdocs\\Yii1\\yii'
+    'SCRIPT_NAME' => 'D:\\jsf\\htdocs\\Yii1\\yii'
+    'SCRIPT_FILENAME' => 'D:\\jsf\\htdocs\\Yii1\\yii'
+    'PATH_TRANSLATED' => 'D:\\jsf\\htdocs\\Yii1\\yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1606748796.5972
+    'REQUEST_TIME' => 1606748796
+    'argv' => [
+        0 => 'D:\\jsf\\htdocs\\Yii1\\yii'
+        1 => 'rbac/init'
+    ]
+    'argc' => 2
+]
+2020-11-30 16:08:06 [-][-][-][error][yii\base\UnknownMethodException] yii\base\UnknownMethodException: Calling unknown method: yii\rbac\DbManager::updatePermission() in D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\base\Component.php:300
+Stack trace:
+#0 D:\jsf\htdocs\Yii1\console\controllers\RbacController.php(21): yii\base\Component->__call('updatePermissio...', Array)
+#1 [internal function]: console\controllers\RbacController->actionInit()
+#2 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#3 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\base\Controller.php(180): yii\base\InlineAction->runWithParams(Array)
+#4 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\console\Controller.php(179): yii\base\Controller->runAction('init', Array)
+#5 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\base\Module.php(528): yii\console\Controller->runAction('init', Array)
+#6 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\console\Application.php(180): yii\base\Module->runAction('rbac/init', Array)
+#7 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\console\Application.php(147): yii\console\Application->runAction('rbac/init', Array)
+#8 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\base\Application.php(386): yii\console\Application->handleRequest(Object(yii\console\Request))
+#9 D:\jsf\htdocs\Yii1\yii(23): yii\base\Application->run()
+#10 {main}
+2020-11-30 16:08:06 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'ALLUSERSPROFILE' => 'C:\\ProgramData'
+    'APPDATA' => 'C:\\Users\\admin\\AppData\\Roaming'
+    'ChocolateyInstall' => 'C:\\ProgramData\\chocolatey'
+    'ChocolateyLastPathUpdate' => '132490140860389144'
+    'CommonProgramFiles' => 'C:\\Program Files\\Common Files'
+    'CommonProgramFiles(x86)' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramW6432' => 'C:\\Program Files\\Common Files'
+    'COMPUTERNAME' => 'LAPTOP-2T9NO19N'
+    'ComSpec' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'DriverData' => 'C:\\Windows\\System32\\Drivers\\DriverData'
+    'FPS_BROWSER_APP_PROFILE_STRING' => 'Internet Explorer'
+    'FPS_BROWSER_USER_PROFILE_STRING' => 'Default'
+    'HOMEDRIVE' => 'C:'
+    'HOMEPATH' => '\\Users\\admin'
+    'JAVA_HOME' => 'C:\\Users\\admin\\Downloads\\JDK'
+    'LOCALAPPDATA' => 'C:\\Users\\admin\\AppData\\Local'
+    'LOGONSERVER' => '\\\\LAPTOP-2T9NO19N'
+    'NUMBER_OF_PROCESSORS' => '8'
+    'OneDrive' => 'C:\\Users\\admin\\OneDrive - Hanoi University of Science and Technology'
+    'OneDriveCommercial' => 'C:\\Users\\admin\\OneDrive - Hanoi University of Science and Technology'
+    'OS' => 'Windows_NT'
+    'Path' => 'C:\\Python39\\Scripts\\;C:\\Python39\\;c:\\Program Files\\Java\\jdk1.8.0_191\\bin;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\iCLS\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\iCLS\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\WINDOWS\\System32\\OpenSSH\\;\"C:\\Users\\admin\\Downloads\\JDK\\bin;\";C:\\Program Files\\nodejs\\;C:\\ProgramData\\chocolatey\\bin;C:\\Program Files\\Git\\cmd;D:\\Python\\Scripts\\;D:\\Python\\;C:\\Users\\admin\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\admin\\AppData\\Local\\Programs\\Microsoft VS Code\\bin;C:\\Users\\admin\\AppData\\Local\\GitHubDesktop\\bin;C:\\Program Files\\JetBrains\\WebStorm 2020.2.3\\bin;D:\\jsf\\php;C:\\Users\\admin\\AppData\\Roaming\\npm;C:\\Users\\admin\\AppData\\Local\\atom\\bin'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW'
+    'PHP_COMMAND' => 'php.exe'
+    'PROCESSOR_ARCHITECTURE' => 'AMD64'
+    'PROCESSOR_IDENTIFIER' => 'Intel64 Family 6 Model 142 Stepping 10, GenuineIntel'
+    'PROCESSOR_LEVEL' => '6'
+    'PROCESSOR_REVISION' => '8e0a'
+    'ProgramData' => 'C:\\ProgramData'
+    'ProgramFiles' => 'C:\\Program Files'
+    'ProgramFiles(x86)' => 'C:\\Program Files (x86)'
+    'ProgramW6432' => 'C:\\Program Files'
+    'PROMPT' => '$P$G'
+    'PSModulePath' => 'C:\\Program Files\\WindowsPowerShell\\Modules;C:\\WINDOWS\\system32\\WindowsPowerShell\\v1.0\\Modules'
+    'PUBLIC' => 'C:\\Users\\Public'
+    'RTOOLS40_HOME' => 'C:\\rtools40'
+    'SESSIONNAME' => 'Console'
+    'SystemDrive' => 'C:'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'TEMP' => 'C:\\Users\\admin\\AppData\\Local\\Temp'
+    'TMP' => 'C:\\Users\\admin\\AppData\\Local\\Temp'
+    'USERDOMAIN' => 'LAPTOP-2T9NO19N'
+    'USERDOMAIN_ROAMINGPROFILE' => 'LAPTOP-2T9NO19N'
+    'USERNAME' => 'admin'
+    'USERPROFILE' => 'C:\\Users\\admin'
+    'VBOX_MSI_INSTALL_PATH' => 'C:\\Program Files\\Oracle\\VirtualBox\\'
+    'WebStorm' => 'C:\\Program Files\\JetBrains\\WebStorm 2020.2.3\\bin;'
+    'windir' => 'C:\\WINDOWS'
+    'YII_PATH' => 'D:\\jsf\\htdocs\\Yii1\\'
+    'PHP_SELF' => 'D:\\jsf\\htdocs\\Yii1\\yii'
+    'SCRIPT_NAME' => 'D:\\jsf\\htdocs\\Yii1\\yii'
+    'SCRIPT_FILENAME' => 'D:\\jsf\\htdocs\\Yii1\\yii'
+    'PATH_TRANSLATED' => 'D:\\jsf\\htdocs\\Yii1\\yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1606748886.3898
+    'REQUEST_TIME' => 1606748886
+    'argv' => [
+        0 => 'D:\\jsf\\htdocs\\Yii1\\yii'
+        1 => 'rbac/init'
+    ]
+    'argc' => 2
+]
+2020-11-30 16:22:45 [-][-][-][error][yii\base\ErrorException:8] yii\base\ErrorException: Undefined variable: indexProduct in D:\jsf\htdocs\Yii1\console\controllers\RbacController.php:38
+Stack trace:
+#0 D:\jsf\htdocs\Yii1\console\controllers\RbacController.php(38): yii\base\ErrorHandler->handleError(8, 'Undefined varia...', 'D:\\jsf\\htdocs\\Y...', 38, Array)
+#1 [internal function]: console\controllers\RbacController->actionInit()
+#2 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#3 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\base\Controller.php(180): yii\base\InlineAction->runWithParams(Array)
+#4 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\console\Controller.php(179): yii\base\Controller->runAction('init', Array)
+#5 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\base\Module.php(528): yii\console\Controller->runAction('init', Array)
+#6 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\console\Application.php(180): yii\base\Module->runAction('rbac/init', Array)
+#7 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\console\Application.php(147): yii\console\Application->runAction('rbac/init', Array)
+#8 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\base\Application.php(386): yii\console\Application->handleRequest(Object(yii\console\Request))
+#9 D:\jsf\htdocs\Yii1\yii(23): yii\base\Application->run()
+#10 {main}
+2020-11-30 16:22:45 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'ALLUSERSPROFILE' => 'C:\\ProgramData'
+    'APPDATA' => 'C:\\Users\\admin\\AppData\\Roaming'
+    'ChocolateyInstall' => 'C:\\ProgramData\\chocolatey'
+    'ChocolateyLastPathUpdate' => '132490140860389144'
+    'CommonProgramFiles' => 'C:\\Program Files\\Common Files'
+    'CommonProgramFiles(x86)' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramW6432' => 'C:\\Program Files\\Common Files'
+    'COMPUTERNAME' => 'LAPTOP-2T9NO19N'
+    'ComSpec' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'DriverData' => 'C:\\Windows\\System32\\Drivers\\DriverData'
+    'FPS_BROWSER_APP_PROFILE_STRING' => 'Internet Explorer'
+    'FPS_BROWSER_USER_PROFILE_STRING' => 'Default'
+    'HOMEDRIVE' => 'C:'
+    'HOMEPATH' => '\\Users\\admin'
+    'JAVA_HOME' => 'C:\\Users\\admin\\Downloads\\JDK'
+    'LOCALAPPDATA' => 'C:\\Users\\admin\\AppData\\Local'
+    'LOGONSERVER' => '\\\\LAPTOP-2T9NO19N'
+    'NUMBER_OF_PROCESSORS' => '8'
+    'OneDrive' => 'C:\\Users\\admin\\OneDrive - Hanoi University of Science and Technology'
+    'OneDriveCommercial' => 'C:\\Users\\admin\\OneDrive - Hanoi University of Science and Technology'
+    'OS' => 'Windows_NT'
+    'Path' => 'C:\\Python39\\Scripts\\;C:\\Python39\\;c:\\Program Files\\Java\\jdk1.8.0_191\\bin;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\iCLS\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\iCLS\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\WINDOWS\\System32\\OpenSSH\\;\"C:\\Users\\admin\\Downloads\\JDK\\bin;\";C:\\Program Files\\nodejs\\;C:\\ProgramData\\chocolatey\\bin;C:\\Program Files\\Git\\cmd;D:\\Python\\Scripts\\;D:\\Python\\;C:\\Users\\admin\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\admin\\AppData\\Local\\Programs\\Microsoft VS Code\\bin;C:\\Users\\admin\\AppData\\Local\\GitHubDesktop\\bin;C:\\Program Files\\JetBrains\\WebStorm 2020.2.3\\bin;D:\\jsf\\php;C:\\Users\\admin\\AppData\\Roaming\\npm;C:\\Users\\admin\\AppData\\Local\\atom\\bin'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW'
+    'PHP_COMMAND' => 'php.exe'
+    'PROCESSOR_ARCHITECTURE' => 'AMD64'
+    'PROCESSOR_IDENTIFIER' => 'Intel64 Family 6 Model 142 Stepping 10, GenuineIntel'
+    'PROCESSOR_LEVEL' => '6'
+    'PROCESSOR_REVISION' => '8e0a'
+    'ProgramData' => 'C:\\ProgramData'
+    'ProgramFiles' => 'C:\\Program Files'
+    'ProgramFiles(x86)' => 'C:\\Program Files (x86)'
+    'ProgramW6432' => 'C:\\Program Files'
+    'PROMPT' => '$P$G'
+    'PSModulePath' => 'C:\\Program Files\\WindowsPowerShell\\Modules;C:\\WINDOWS\\system32\\WindowsPowerShell\\v1.0\\Modules'
+    'PUBLIC' => 'C:\\Users\\Public'
+    'RTOOLS40_HOME' => 'C:\\rtools40'
+    'SESSIONNAME' => 'Console'
+    'SystemDrive' => 'C:'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'TEMP' => 'C:\\Users\\admin\\AppData\\Local\\Temp'
+    'TMP' => 'C:\\Users\\admin\\AppData\\Local\\Temp'
+    'USERDOMAIN' => 'LAPTOP-2T9NO19N'
+    'USERDOMAIN_ROAMINGPROFILE' => 'LAPTOP-2T9NO19N'
+    'USERNAME' => 'admin'
+    'USERPROFILE' => 'C:\\Users\\admin'
+    'VBOX_MSI_INSTALL_PATH' => 'C:\\Program Files\\Oracle\\VirtualBox\\'
+    'WebStorm' => 'C:\\Program Files\\JetBrains\\WebStorm 2020.2.3\\bin;'
+    'windir' => 'C:\\WINDOWS'
+    'YII_PATH' => 'D:\\jsf\\htdocs\\Yii1\\'
+    'PHP_SELF' => 'D:\\jsf\\htdocs\\Yii1\\yii'
+    'SCRIPT_NAME' => 'D:\\jsf\\htdocs\\Yii1\\yii'
+    'SCRIPT_FILENAME' => 'D:\\jsf\\htdocs\\Yii1\\yii'
+    'PATH_TRANSLATED' => 'D:\\jsf\\htdocs\\Yii1\\yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1606749765.1337
+    'REQUEST_TIME' => 1606749765
+    'argv' => [
+        0 => 'D:\\jsf\\htdocs\\Yii1\\yii'
+        1 => 'rbac/init'
+    ]
+    'argc' => 2
+]
+2020-12-01 07:07:44 [-][-][-][error][yii\db\IntegrityException] PDOException: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'create-product' for key 'PRIMARY' in D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\db\Command.php:1293
+Stack trace:
+#0 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\db\Command.php(1293): PDOStatement->execute()
+#1 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\db\Command.php(1093): yii\db\Command->internalExecute('INSERT INTO `au...')
+#2 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\rbac\DbManager.php(286): yii\db\Command->execute()
+#3 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\rbac\BaseManager.php(133): yii\rbac\DbManager->addItem(Object(yii\rbac\Permission))
+#4 D:\jsf\htdocs\Yii1\console\controllers\RbacController.php(15): yii\rbac\BaseManager->add(Object(yii\rbac\Permission))
+#5 [internal function]: console\controllers\RbacController->actionInit()
+#6 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#7 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\base\Controller.php(180): yii\base\InlineAction->runWithParams(Array)
+#8 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\console\Controller.php(179): yii\base\Controller->runAction('init', Array)
+#9 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\base\Module.php(528): yii\console\Controller->runAction('init', Array)
+#10 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\console\Application.php(180): yii\base\Module->runAction('rbac/init', Array)
+#11 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\console\Application.php(147): yii\console\Application->runAction('rbac/init', Array)
+#12 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\base\Application.php(386): yii\console\Application->handleRequest(Object(yii\console\Request))
+#13 D:\jsf\htdocs\Yii1\yii(23): yii\base\Application->run()
+#14 {main}
+
+Next yii\db\IntegrityException: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'create-product' for key 'PRIMARY'
+The SQL being executed was: INSERT INTO `auth_item` (`name`, `type`, `description`, `rule_name`, `data`, `created_at`, `updated_at`) VALUES ('create-product', 2, 'Create a product', NULL, NULL, 1606802864, 1606802864) in D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\db\Schema.php:677
+Stack trace:
+#0 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\db\Command.php(1298): yii\db\Schema->convertException(Object(PDOException), 'INSERT INTO `au...')
+#1 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\db\Command.php(1093): yii\db\Command->internalExecute('INSERT INTO `au...')
+#2 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\rbac\DbManager.php(286): yii\db\Command->execute()
+#3 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\rbac\BaseManager.php(133): yii\rbac\DbManager->addItem(Object(yii\rbac\Permission))
+#4 D:\jsf\htdocs\Yii1\console\controllers\RbacController.php(15): yii\rbac\BaseManager->add(Object(yii\rbac\Permission))
+#5 [internal function]: console\controllers\RbacController->actionInit()
+#6 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#7 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\base\Controller.php(180): yii\base\InlineAction->runWithParams(Array)
+#8 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\console\Controller.php(179): yii\base\Controller->runAction('init', Array)
+#9 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\base\Module.php(528): yii\console\Controller->runAction('init', Array)
+#10 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\console\Application.php(180): yii\base\Module->runAction('rbac/init', Array)
+#11 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\console\Application.php(147): yii\console\Application->runAction('rbac/init', Array)
+#12 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\base\Application.php(386): yii\console\Application->handleRequest(Object(yii\console\Request))
+#13 D:\jsf\htdocs\Yii1\yii(23): yii\base\Application->run()
+#14 {main}
+Additional Information:
+Array
+(
+    [0] => 23000
+    [1] => 1062
+    [2] => Duplicate entry 'create-product' for key 'PRIMARY'
+)
+
+2020-12-01 07:07:44 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'ALLUSERSPROFILE' => 'C:\\ProgramData'
+    'APPDATA' => 'C:\\Users\\admin\\AppData\\Roaming'
+    'ChocolateyInstall' => 'C:\\ProgramData\\chocolatey'
+    'ChocolateyLastPathUpdate' => '132490140860389144'
+    'CommonProgramFiles' => 'C:\\Program Files\\Common Files'
+    'CommonProgramFiles(x86)' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramW6432' => 'C:\\Program Files\\Common Files'
+    'COMPUTERNAME' => 'LAPTOP-2T9NO19N'
+    'ComSpec' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'DriverData' => 'C:\\Windows\\System32\\Drivers\\DriverData'
+    'FPS_BROWSER_APP_PROFILE_STRING' => 'Internet Explorer'
+    'FPS_BROWSER_USER_PROFILE_STRING' => 'Default'
+    'HOMEDRIVE' => 'C:'
+    'HOMEPATH' => '\\Users\\admin'
+    'JAVA_HOME' => 'C:\\Users\\admin\\Downloads\\JDK'
+    'LOCALAPPDATA' => 'C:\\Users\\admin\\AppData\\Local'
+    'LOGONSERVER' => '\\\\LAPTOP-2T9NO19N'
+    'NUMBER_OF_PROCESSORS' => '8'
+    'OneDrive' => 'C:\\Users\\admin\\OneDrive - Hanoi University of Science and Technology'
+    'OneDriveCommercial' => 'C:\\Users\\admin\\OneDrive - Hanoi University of Science and Technology'
+    'OS' => 'Windows_NT'
+    'Path' => 'C:\\Python39\\Scripts\\;C:\\Python39\\;c:\\Program Files\\Java\\jdk1.8.0_191\\bin;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\iCLS\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\iCLS\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\WINDOWS\\System32\\OpenSSH\\;\"C:\\Users\\admin\\Downloads\\JDK\\bin;\";C:\\Program Files\\nodejs\\;C:\\ProgramData\\chocolatey\\bin;C:\\Program Files\\Git\\cmd;D:\\Python\\Scripts\\;D:\\Python\\;C:\\Users\\admin\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\admin\\AppData\\Local\\Programs\\Microsoft VS Code\\bin;C:\\Users\\admin\\AppData\\Local\\GitHubDesktop\\bin;C:\\Program Files\\JetBrains\\WebStorm 2020.2.3\\bin;D:\\jsf\\php;C:\\Users\\admin\\AppData\\Roaming\\npm;C:\\Users\\admin\\AppData\\Local\\atom\\bin'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW'
+    'PHP_COMMAND' => 'php.exe'
+    'PROCESSOR_ARCHITECTURE' => 'AMD64'
+    'PROCESSOR_IDENTIFIER' => 'Intel64 Family 6 Model 142 Stepping 10, GenuineIntel'
+    'PROCESSOR_LEVEL' => '6'
+    'PROCESSOR_REVISION' => '8e0a'
+    'ProgramData' => 'C:\\ProgramData'
+    'ProgramFiles' => 'C:\\Program Files'
+    'ProgramFiles(x86)' => 'C:\\Program Files (x86)'
+    'ProgramW6432' => 'C:\\Program Files'
+    'PROMPT' => '$P$G'
+    'PSModulePath' => 'C:\\Program Files\\WindowsPowerShell\\Modules;C:\\WINDOWS\\system32\\WindowsPowerShell\\v1.0\\Modules'
+    'PUBLIC' => 'C:\\Users\\Public'
+    'RTOOLS40_HOME' => 'C:\\rtools40'
+    'SESSIONNAME' => 'Console'
+    'SystemDrive' => 'C:'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'TEMP' => 'C:\\Users\\admin\\AppData\\Local\\Temp'
+    'TMP' => 'C:\\Users\\admin\\AppData\\Local\\Temp'
+    'USERDOMAIN' => 'LAPTOP-2T9NO19N'
+    'USERDOMAIN_ROAMINGPROFILE' => 'LAPTOP-2T9NO19N'
+    'USERNAME' => 'admin'
+    'USERPROFILE' => 'C:\\Users\\admin'
+    'VBOX_MSI_INSTALL_PATH' => 'C:\\Program Files\\Oracle\\VirtualBox\\'
+    'WebStorm' => 'C:\\Program Files\\JetBrains\\WebStorm 2020.2.3\\bin;'
+    'windir' => 'C:\\WINDOWS'
+    'YII_PATH' => 'D:\\jsf\\htdocs\\Yii1\\'
+    'PHP_SELF' => 'D:\\jsf\\htdocs\\Yii1\\yii'
+    'SCRIPT_NAME' => 'D:\\jsf\\htdocs\\Yii1\\yii'
+    'SCRIPT_FILENAME' => 'D:\\jsf\\htdocs\\Yii1\\yii'
+    'PATH_TRANSLATED' => 'D:\\jsf\\htdocs\\Yii1\\yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1606802864.6324
+    'REQUEST_TIME' => 1606802864
+    'argv' => [
+        0 => 'D:\\jsf\\htdocs\\Yii1\\yii'
+        1 => 'rbac/init'
+    ]
+    'argc' => 2
+]
+2020-12-01 07:08:33 [-][-][-][error][yii\db\IntegrityException] PDOException: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'manager-product-index-product' for key 'PRIMARY' in D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\db\Command.php:1293
+Stack trace:
+#0 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\db\Command.php(1293): PDOStatement->execute()
+#1 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\db\Command.php(1093): yii\db\Command->internalExecute('INSERT INTO `au...')
+#2 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\rbac\DbManager.php(761): yii\db\Command->execute()
+#3 D:\jsf\htdocs\Yii1\console\controllers\RbacController.php(38): yii\rbac\DbManager->addChild(Object(yii\rbac\Role), Object(yii\rbac\Permission))
+#4 [internal function]: console\controllers\RbacController->actionInit()
+#5 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#6 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\base\Controller.php(180): yii\base\InlineAction->runWithParams(Array)
+#7 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\console\Controller.php(179): yii\base\Controller->runAction('init', Array)
+#8 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\base\Module.php(528): yii\console\Controller->runAction('init', Array)
+#9 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\console\Application.php(180): yii\base\Module->runAction('rbac/init', Array)
+#10 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\console\Application.php(147): yii\console\Application->runAction('rbac/init', Array)
+#11 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\base\Application.php(386): yii\console\Application->handleRequest(Object(yii\console\Request))
+#12 D:\jsf\htdocs\Yii1\yii(23): yii\base\Application->run()
+#13 {main}
+
+Next yii\db\IntegrityException: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'manager-product-index-product' for key 'PRIMARY'
+The SQL being executed was: INSERT INTO `auth_item_child` (`parent`, `child`) VALUES ('manager-product', 'index-product') in D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\db\Schema.php:677
+Stack trace:
+#0 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\db\Command.php(1298): yii\db\Schema->convertException(Object(PDOException), 'INSERT INTO `au...')
+#1 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\db\Command.php(1093): yii\db\Command->internalExecute('INSERT INTO `au...')
+#2 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\rbac\DbManager.php(761): yii\db\Command->execute()
+#3 D:\jsf\htdocs\Yii1\console\controllers\RbacController.php(38): yii\rbac\DbManager->addChild(Object(yii\rbac\Role), Object(yii\rbac\Permission))
+#4 [internal function]: console\controllers\RbacController->actionInit()
+#5 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#6 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\base\Controller.php(180): yii\base\InlineAction->runWithParams(Array)
+#7 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\console\Controller.php(179): yii\base\Controller->runAction('init', Array)
+#8 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\base\Module.php(528): yii\console\Controller->runAction('init', Array)
+#9 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\console\Application.php(180): yii\base\Module->runAction('rbac/init', Array)
+#10 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\console\Application.php(147): yii\console\Application->runAction('rbac/init', Array)
+#11 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\base\Application.php(386): yii\console\Application->handleRequest(Object(yii\console\Request))
+#12 D:\jsf\htdocs\Yii1\yii(23): yii\base\Application->run()
+#13 {main}
+Additional Information:
+Array
+(
+    [0] => 23000
+    [1] => 1062
+    [2] => Duplicate entry 'manager-product-index-product' for key 'PRIMARY'
+)
+
+2020-12-01 07:08:33 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'ALLUSERSPROFILE' => 'C:\\ProgramData'
+    'APPDATA' => 'C:\\Users\\admin\\AppData\\Roaming'
+    'ChocolateyInstall' => 'C:\\ProgramData\\chocolatey'
+    'ChocolateyLastPathUpdate' => '132490140860389144'
+    'CommonProgramFiles' => 'C:\\Program Files\\Common Files'
+    'CommonProgramFiles(x86)' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramW6432' => 'C:\\Program Files\\Common Files'
+    'COMPUTERNAME' => 'LAPTOP-2T9NO19N'
+    'ComSpec' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'DriverData' => 'C:\\Windows\\System32\\Drivers\\DriverData'
+    'FPS_BROWSER_APP_PROFILE_STRING' => 'Internet Explorer'
+    'FPS_BROWSER_USER_PROFILE_STRING' => 'Default'
+    'HOMEDRIVE' => 'C:'
+    'HOMEPATH' => '\\Users\\admin'
+    'JAVA_HOME' => 'C:\\Users\\admin\\Downloads\\JDK'
+    'LOCALAPPDATA' => 'C:\\Users\\admin\\AppData\\Local'
+    'LOGONSERVER' => '\\\\LAPTOP-2T9NO19N'
+    'NUMBER_OF_PROCESSORS' => '8'
+    'OneDrive' => 'C:\\Users\\admin\\OneDrive - Hanoi University of Science and Technology'
+    'OneDriveCommercial' => 'C:\\Users\\admin\\OneDrive - Hanoi University of Science and Technology'
+    'OS' => 'Windows_NT'
+    'Path' => 'C:\\Python39\\Scripts\\;C:\\Python39\\;c:\\Program Files\\Java\\jdk1.8.0_191\\bin;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\iCLS\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\iCLS\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\WINDOWS\\System32\\OpenSSH\\;\"C:\\Users\\admin\\Downloads\\JDK\\bin;\";C:\\Program Files\\nodejs\\;C:\\ProgramData\\chocolatey\\bin;C:\\Program Files\\Git\\cmd;D:\\Python\\Scripts\\;D:\\Python\\;C:\\Users\\admin\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\admin\\AppData\\Local\\Programs\\Microsoft VS Code\\bin;C:\\Users\\admin\\AppData\\Local\\GitHubDesktop\\bin;C:\\Program Files\\JetBrains\\WebStorm 2020.2.3\\bin;D:\\jsf\\php;C:\\Users\\admin\\AppData\\Roaming\\npm;C:\\Users\\admin\\AppData\\Local\\atom\\bin'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW'
+    'PHP_COMMAND' => 'php.exe'
+    'PROCESSOR_ARCHITECTURE' => 'AMD64'
+    'PROCESSOR_IDENTIFIER' => 'Intel64 Family 6 Model 142 Stepping 10, GenuineIntel'
+    'PROCESSOR_LEVEL' => '6'
+    'PROCESSOR_REVISION' => '8e0a'
+    'ProgramData' => 'C:\\ProgramData'
+    'ProgramFiles' => 'C:\\Program Files'
+    'ProgramFiles(x86)' => 'C:\\Program Files (x86)'
+    'ProgramW6432' => 'C:\\Program Files'
+    'PROMPT' => '$P$G'
+    'PSModulePath' => 'C:\\Program Files\\WindowsPowerShell\\Modules;C:\\WINDOWS\\system32\\WindowsPowerShell\\v1.0\\Modules'
+    'PUBLIC' => 'C:\\Users\\Public'
+    'RTOOLS40_HOME' => 'C:\\rtools40'
+    'SESSIONNAME' => 'Console'
+    'SystemDrive' => 'C:'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'TEMP' => 'C:\\Users\\admin\\AppData\\Local\\Temp'
+    'TMP' => 'C:\\Users\\admin\\AppData\\Local\\Temp'
+    'USERDOMAIN' => 'LAPTOP-2T9NO19N'
+    'USERDOMAIN_ROAMINGPROFILE' => 'LAPTOP-2T9NO19N'
+    'USERNAME' => 'admin'
+    'USERPROFILE' => 'C:\\Users\\admin'
+    'VBOX_MSI_INSTALL_PATH' => 'C:\\Program Files\\Oracle\\VirtualBox\\'
+    'WebStorm' => 'C:\\Program Files\\JetBrains\\WebStorm 2020.2.3\\bin;'
+    'windir' => 'C:\\WINDOWS'
+    'YII_PATH' => 'D:\\jsf\\htdocs\\Yii1\\'
+    'PHP_SELF' => 'D:\\jsf\\htdocs\\Yii1\\yii'
+    'SCRIPT_NAME' => 'D:\\jsf\\htdocs\\Yii1\\yii'
+    'SCRIPT_FILENAME' => 'D:\\jsf\\htdocs\\Yii1\\yii'
+    'PATH_TRANSLATED' => 'D:\\jsf\\htdocs\\Yii1\\yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1606802913.735
+    'REQUEST_TIME' => 1606802913
+    'argv' => [
+        0 => 'D:\\jsf\\htdocs\\Yii1\\yii'
+        1 => 'rbac/init'
+    ]
+    'argc' => 2
+]
+2020-12-01 07:09:06 [-][-][-][error][yii\db\IntegrityException] PDOException: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'manager-product-1' for key 'PRIMARY' in D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\db\Command.php:1293
+Stack trace:
+#0 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\db\Command.php(1293): PDOStatement->execute()
+#1 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\db\Command.php(1093): yii\db\Command->internalExecute('INSERT INTO `au...')
+#2 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\rbac\DbManager.php(861): yii\db\Command->execute()
+#3 D:\jsf\htdocs\Yii1\console\controllers\RbacController.php(45): yii\rbac\DbManager->assign(Object(yii\rbac\Role), 1)
+#4 [internal function]: console\controllers\RbacController->actionInit()
+#5 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#6 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\base\Controller.php(180): yii\base\InlineAction->runWithParams(Array)
+#7 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\console\Controller.php(179): yii\base\Controller->runAction('init', Array)
+#8 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\base\Module.php(528): yii\console\Controller->runAction('init', Array)
+#9 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\console\Application.php(180): yii\base\Module->runAction('rbac/init', Array)
+#10 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\console\Application.php(147): yii\console\Application->runAction('rbac/init', Array)
+#11 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\base\Application.php(386): yii\console\Application->handleRequest(Object(yii\console\Request))
+#12 D:\jsf\htdocs\Yii1\yii(23): yii\base\Application->run()
+#13 {main}
+
+Next yii\db\IntegrityException: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'manager-product-1' for key 'PRIMARY'
+The SQL being executed was: INSERT INTO `auth_assignment` (`user_id`, `item_name`, `created_at`) VALUES ('1', 'manager-product', 1606802946) in D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\db\Schema.php:677
+Stack trace:
+#0 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\db\Command.php(1298): yii\db\Schema->convertException(Object(PDOException), 'INSERT INTO `au...')
+#1 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\db\Command.php(1093): yii\db\Command->internalExecute('INSERT INTO `au...')
+#2 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\rbac\DbManager.php(861): yii\db\Command->execute()
+#3 D:\jsf\htdocs\Yii1\console\controllers\RbacController.php(45): yii\rbac\DbManager->assign(Object(yii\rbac\Role), 1)
+#4 [internal function]: console\controllers\RbacController->actionInit()
+#5 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#6 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\base\Controller.php(180): yii\base\InlineAction->runWithParams(Array)
+#7 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\console\Controller.php(179): yii\base\Controller->runAction('init', Array)
+#8 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\base\Module.php(528): yii\console\Controller->runAction('init', Array)
+#9 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\console\Application.php(180): yii\base\Module->runAction('rbac/init', Array)
+#10 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\console\Application.php(147): yii\console\Application->runAction('rbac/init', Array)
+#11 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\base\Application.php(386): yii\console\Application->handleRequest(Object(yii\console\Request))
+#12 D:\jsf\htdocs\Yii1\yii(23): yii\base\Application->run()
+#13 {main}
+Additional Information:
+Array
+(
+    [0] => 23000
+    [1] => 1062
+    [2] => Duplicate entry 'manager-product-1' for key 'PRIMARY'
+)
+
+2020-12-01 07:09:06 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'ALLUSERSPROFILE' => 'C:\\ProgramData'
+    'APPDATA' => 'C:\\Users\\admin\\AppData\\Roaming'
+    'ChocolateyInstall' => 'C:\\ProgramData\\chocolatey'
+    'ChocolateyLastPathUpdate' => '132490140860389144'
+    'CommonProgramFiles' => 'C:\\Program Files\\Common Files'
+    'CommonProgramFiles(x86)' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramW6432' => 'C:\\Program Files\\Common Files'
+    'COMPUTERNAME' => 'LAPTOP-2T9NO19N'
+    'ComSpec' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'DriverData' => 'C:\\Windows\\System32\\Drivers\\DriverData'
+    'FPS_BROWSER_APP_PROFILE_STRING' => 'Internet Explorer'
+    'FPS_BROWSER_USER_PROFILE_STRING' => 'Default'
+    'HOMEDRIVE' => 'C:'
+    'HOMEPATH' => '\\Users\\admin'
+    'JAVA_HOME' => 'C:\\Users\\admin\\Downloads\\JDK'
+    'LOCALAPPDATA' => 'C:\\Users\\admin\\AppData\\Local'
+    'LOGONSERVER' => '\\\\LAPTOP-2T9NO19N'
+    'NUMBER_OF_PROCESSORS' => '8'
+    'OneDrive' => 'C:\\Users\\admin\\OneDrive - Hanoi University of Science and Technology'
+    'OneDriveCommercial' => 'C:\\Users\\admin\\OneDrive - Hanoi University of Science and Technology'
+    'OS' => 'Windows_NT'
+    'Path' => 'C:\\Python39\\Scripts\\;C:\\Python39\\;c:\\Program Files\\Java\\jdk1.8.0_191\\bin;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\iCLS\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\iCLS\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\WINDOWS\\System32\\OpenSSH\\;\"C:\\Users\\admin\\Downloads\\JDK\\bin;\";C:\\Program Files\\nodejs\\;C:\\ProgramData\\chocolatey\\bin;C:\\Program Files\\Git\\cmd;D:\\Python\\Scripts\\;D:\\Python\\;C:\\Users\\admin\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\admin\\AppData\\Local\\Programs\\Microsoft VS Code\\bin;C:\\Users\\admin\\AppData\\Local\\GitHubDesktop\\bin;C:\\Program Files\\JetBrains\\WebStorm 2020.2.3\\bin;D:\\jsf\\php;C:\\Users\\admin\\AppData\\Roaming\\npm;C:\\Users\\admin\\AppData\\Local\\atom\\bin'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW'
+    'PHP_COMMAND' => 'php.exe'
+    'PROCESSOR_ARCHITECTURE' => 'AMD64'
+    'PROCESSOR_IDENTIFIER' => 'Intel64 Family 6 Model 142 Stepping 10, GenuineIntel'
+    'PROCESSOR_LEVEL' => '6'
+    'PROCESSOR_REVISION' => '8e0a'
+    'ProgramData' => 'C:\\ProgramData'
+    'ProgramFiles' => 'C:\\Program Files'
+    'ProgramFiles(x86)' => 'C:\\Program Files (x86)'
+    'ProgramW6432' => 'C:\\Program Files'
+    'PROMPT' => '$P$G'
+    'PSModulePath' => 'C:\\Program Files\\WindowsPowerShell\\Modules;C:\\WINDOWS\\system32\\WindowsPowerShell\\v1.0\\Modules'
+    'PUBLIC' => 'C:\\Users\\Public'
+    'RTOOLS40_HOME' => 'C:\\rtools40'
+    'SESSIONNAME' => 'Console'
+    'SystemDrive' => 'C:'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'TEMP' => 'C:\\Users\\admin\\AppData\\Local\\Temp'
+    'TMP' => 'C:\\Users\\admin\\AppData\\Local\\Temp'
+    'USERDOMAIN' => 'LAPTOP-2T9NO19N'
+    'USERDOMAIN_ROAMINGPROFILE' => 'LAPTOP-2T9NO19N'
+    'USERNAME' => 'admin'
+    'USERPROFILE' => 'C:\\Users\\admin'
+    'VBOX_MSI_INSTALL_PATH' => 'C:\\Program Files\\Oracle\\VirtualBox\\'
+    'WebStorm' => 'C:\\Program Files\\JetBrains\\WebStorm 2020.2.3\\bin;'
+    'windir' => 'C:\\WINDOWS'
+    'YII_PATH' => 'D:\\jsf\\htdocs\\Yii1\\'
+    'PHP_SELF' => 'D:\\jsf\\htdocs\\Yii1\\yii'
+    'SCRIPT_NAME' => 'D:\\jsf\\htdocs\\Yii1\\yii'
+    'SCRIPT_FILENAME' => 'D:\\jsf\\htdocs\\Yii1\\yii'
+    'PATH_TRANSLATED' => 'D:\\jsf\\htdocs\\Yii1\\yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1606802946.1352
+    'REQUEST_TIME' => 1606802946
+    'argv' => [
+        0 => 'D:\\jsf\\htdocs\\Yii1\\yii'
+        1 => 'rbac/init'
+    ]
+    'argc' => 2
+]
+2020-12-09 16:15:57 [-][-][-][error][yii\console\UnknownCommandException] yii\base\InvalidRouteException: Unable to resolve the request "rabc/init". in D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\base\Module.php:537
+Stack trace:
+#0 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\console\Application.php(180): yii\base\Module->runAction('rabc/init', Array)
+#1 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\console\Application.php(147): yii\console\Application->runAction('rabc/init', Array)
+#2 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\base\Application.php(386): yii\console\Application->handleRequest(Object(yii\console\Request))
+#3 D:\jsf\htdocs\Yii1\yii(23): yii\base\Application->run()
+#4 {main}
+
+Next yii\console\UnknownCommandException: Unknown command "rabc/init". in D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\console\Application.php:183
+Stack trace:
+#0 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\console\Application.php(147): yii\console\Application->runAction('rabc/init', Array)
+#1 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\base\Application.php(386): yii\console\Application->handleRequest(Object(yii\console\Request))
+#2 D:\jsf\htdocs\Yii1\yii(23): yii\base\Application->run()
+#3 {main}
+2020-12-09 16:15:57 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'ALLUSERSPROFILE' => 'C:\\ProgramData'
+    'APPDATA' => 'C:\\Users\\admin\\AppData\\Roaming'
+    'ChocolateyInstall' => 'C:\\ProgramData\\chocolatey'
+    'ChocolateyLastPathUpdate' => '132490140860389144'
+    'CommonProgramFiles' => 'C:\\Program Files\\Common Files'
+    'CommonProgramFiles(x86)' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramW6432' => 'C:\\Program Files\\Common Files'
+    'COMPUTERNAME' => 'LAPTOP-2T9NO19N'
+    'ComSpec' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'DriverData' => 'C:\\Windows\\System32\\Drivers\\DriverData'
+    'FPS_BROWSER_APP_PROFILE_STRING' => 'Internet Explorer'
+    'FPS_BROWSER_USER_PROFILE_STRING' => 'Default'
+    'HOMEDRIVE' => 'C:'
+    'HOMEPATH' => '\\Users\\admin'
+    'JAVA_HOME' => 'C:\\Users\\admin\\Downloads\\JDK'
+    'LOCALAPPDATA' => 'C:\\Users\\admin\\AppData\\Local'
+    'LOGONSERVER' => '\\\\LAPTOP-2T9NO19N'
+    'NUMBER_OF_PROCESSORS' => '8'
+    'OneDrive' => 'C:\\Users\\admin\\OneDrive - Hanoi University of Science and Technology'
+    'OneDriveCommercial' => 'C:\\Users\\admin\\OneDrive - Hanoi University of Science and Technology'
+    'OS' => 'Windows_NT'
+    'Path' => 'C:\\Python39\\Scripts\\;C:\\Python39\\;c:\\Program Files\\Java\\jdk1.8.0_191\\bin;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\iCLS\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\iCLS\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\WINDOWS\\System32\\OpenSSH\\;\"C:\\Users\\admin\\Downloads\\JDK\\bin;\";C:\\Program Files\\nodejs\\;C:\\ProgramData\\chocolatey\\bin;C:\\Program Files\\Git\\cmd;C:\\ProgramData\\ComposerSetup\\bin;D:\\Python\\Scripts\\;D:\\Python\\;C:\\Users\\admin\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\admin\\AppData\\Local\\Programs\\Microsoft VS Code\\bin;C:\\Users\\admin\\AppData\\Local\\GitHubDesktop\\bin;C:\\Program Files\\JetBrains\\WebStorm 2020.2.3\\bin;D:\\jsf\\php;C:\\Users\\admin\\AppData\\Roaming\\npm;C:\\Users\\admin\\AppData\\Local\\atom\\bin;C:\\Users\\admin\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW'
+    'PHP_COMMAND' => 'php.exe'
+    'PROCESSOR_ARCHITECTURE' => 'AMD64'
+    'PROCESSOR_IDENTIFIER' => 'Intel64 Family 6 Model 142 Stepping 10, GenuineIntel'
+    'PROCESSOR_LEVEL' => '6'
+    'PROCESSOR_REVISION' => '8e0a'
+    'ProgramData' => 'C:\\ProgramData'
+    'ProgramFiles' => 'C:\\Program Files'
+    'ProgramFiles(x86)' => 'C:\\Program Files (x86)'
+    'ProgramW6432' => 'C:\\Program Files'
+    'PROMPT' => '$P$G'
+    'PSModulePath' => 'C:\\Program Files\\WindowsPowerShell\\Modules;C:\\WINDOWS\\system32\\WindowsPowerShell\\v1.0\\Modules'
+    'PUBLIC' => 'C:\\Users\\Public'
+    'RTOOLS40_HOME' => 'C:\\rtools40'
+    'SESSIONNAME' => 'Console'
+    'SystemDrive' => 'C:'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'TEMP' => 'C:\\Users\\admin\\AppData\\Local\\Temp'
+    'TMP' => 'C:\\Users\\admin\\AppData\\Local\\Temp'
+    'USERDOMAIN' => 'LAPTOP-2T9NO19N'
+    'USERDOMAIN_ROAMINGPROFILE' => 'LAPTOP-2T9NO19N'
+    'USERNAME' => 'admin'
+    'USERPROFILE' => 'C:\\Users\\admin'
+    'VBOX_MSI_INSTALL_PATH' => 'C:\\Program Files\\Oracle\\VirtualBox\\'
+    'WebStorm' => 'C:\\Program Files\\JetBrains\\WebStorm 2020.2.3\\bin;'
+    'windir' => 'C:\\WINDOWS'
+    'YII_PATH' => 'D:\\jsf\\htdocs\\Yii1\\'
+    'PHP_SELF' => 'D:\\jsf\\htdocs\\Yii1\\yii'
+    'SCRIPT_NAME' => 'D:\\jsf\\htdocs\\Yii1\\yii'
+    'SCRIPT_FILENAME' => 'D:\\jsf\\htdocs\\Yii1\\yii'
+    'PATH_TRANSLATED' => 'D:\\jsf\\htdocs\\Yii1\\yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1607526957.1367
+    'REQUEST_TIME' => 1607526957
+    'argv' => [
+        0 => 'D:\\jsf\\htdocs\\Yii1\\yii'
+        1 => 'rabc/init'
+    ]
+    'argc' => 2
+]

@@ -1,0 +1,1517 @@
+2020-11-24 15:25:40 [::1][-][sfh9l7pr25gtrp546hr051cb5t][error][yii\db\Exception] PDOException: SQLSTATE[HY000] [1049] Unknown database 'yii2advanced' in D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\db\Connection.php:710
+Stack trace:
+#0 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\db\Connection.php(710): PDO->__construct('mysql:host=loca...', 'root', '', NULL)
+#1 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\db\Connection.php(631): yii\db\Connection->createPdoInstance()
+#2 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\db\Connection.php(1030): yii\db\Connection->open()
+#3 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\db\Connection.php(1017): yii\db\Connection->getMasterPdo()
+#4 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\db\mysql\QueryBuilder.php(406): yii\db\Connection->getSlavePdo()
+#5 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\db\mysql\QueryBuilder.php(430): yii\db\mysql\QueryBuilder->supportsFractionalSeconds()
+#6 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\db\mysql\QueryBuilder.php(59): yii\db\mysql\QueryBuilder->defaultTimeTypeMap()
+#7 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\base\BaseObject.php(109): yii\db\mysql\QueryBuilder->init()
+#8 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\db\QueryBuilder.php(116): yii\base\BaseObject->__construct(Array)
+#9 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\db\mysql\Schema.php(217): yii\db\QueryBuilder->__construct(Object(yii\db\Connection))
+#10 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\db\Schema.php(248): yii\db\mysql\Schema->createQueryBuilder()
+#11 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\db\Connection.php(864): yii\db\Schema->getQueryBuilder()
+#12 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\db\ActiveQuery.php(328): yii\db\Connection->getQueryBuilder()
+#13 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\db\Query.php(440): yii\db\ActiveQuery->createCommand(Object(yii\db\Connection))
+#14 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\validators\UniqueValidator.php(187): yii\db\Query->exists()
+#15 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\validators\UniqueValidator.php(145): yii\validators\UniqueValidator->modelExists('\\common\\models\\...', Array, Object(frontend\models\SignupForm))
+#16 [internal function]: yii\validators\UniqueValidator->yii\validators\{closure}(Object(yii\db\Connection))
+#17 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\db\Connection.php(1093): call_user_func(Object(Closure), Object(yii\db\Connection))
+#18 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\validators\UniqueValidator.php(146): yii\db\Connection->useMaster(Object(Closure))
+#19 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\validators\Validator.php(261): yii\validators\UniqueValidator->validateAttribute(Object(frontend\models\SignupForm), 'username')
+#20 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\base\Model.php(367): yii\validators\Validator->validateAttributes(Object(frontend\models\SignupForm), Array)
+#21 D:\jsf\htdocs\Yii1\frontend\models\SignupForm.php(47): yii\base\Model->validate()
+#22 D:\jsf\htdocs\Yii1\frontend\controllers\SiteController.php(156): frontend\models\SignupForm->signup()
+#23 [internal function]: frontend\controllers\SiteController->actionSignup()
+#24 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#25 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\base\Controller.php(180): yii\base\InlineAction->runWithParams(Array)
+#26 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('signup', Array)
+#27 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('site/signup', Array)
+#28 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#29 D:\jsf\htdocs\Yii1\frontend\web\index.php(17): yii\base\Application->run()
+#30 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000] [1049] Unknown database 'yii2advanced' in D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\db\Connection.php:642
+Stack trace:
+#0 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\db\Connection.php(1030): yii\db\Connection->open()
+#1 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\db\Connection.php(1017): yii\db\Connection->getMasterPdo()
+#2 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\db\mysql\QueryBuilder.php(406): yii\db\Connection->getSlavePdo()
+#3 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\db\mysql\QueryBuilder.php(430): yii\db\mysql\QueryBuilder->supportsFractionalSeconds()
+#4 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\db\mysql\QueryBuilder.php(59): yii\db\mysql\QueryBuilder->defaultTimeTypeMap()
+#5 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\base\BaseObject.php(109): yii\db\mysql\QueryBuilder->init()
+#6 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\db\QueryBuilder.php(116): yii\base\BaseObject->__construct(Array)
+#7 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\db\mysql\Schema.php(217): yii\db\QueryBuilder->__construct(Object(yii\db\Connection))
+#8 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\db\Schema.php(248): yii\db\mysql\Schema->createQueryBuilder()
+#9 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\db\Connection.php(864): yii\db\Schema->getQueryBuilder()
+#10 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\db\ActiveQuery.php(328): yii\db\Connection->getQueryBuilder()
+#11 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\db\Query.php(440): yii\db\ActiveQuery->createCommand(Object(yii\db\Connection))
+#12 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\validators\UniqueValidator.php(187): yii\db\Query->exists()
+#13 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\validators\UniqueValidator.php(145): yii\validators\UniqueValidator->modelExists('\\common\\models\\...', Array, Object(frontend\models\SignupForm))
+#14 [internal function]: yii\validators\UniqueValidator->yii\validators\{closure}(Object(yii\db\Connection))
+#15 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\db\Connection.php(1093): call_user_func(Object(Closure), Object(yii\db\Connection))
+#16 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\validators\UniqueValidator.php(146): yii\db\Connection->useMaster(Object(Closure))
+#17 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\validators\Validator.php(261): yii\validators\UniqueValidator->validateAttribute(Object(frontend\models\SignupForm), 'username')
+#18 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\base\Model.php(367): yii\validators\Validator->validateAttributes(Object(frontend\models\SignupForm), Array)
+#19 D:\jsf\htdocs\Yii1\frontend\models\SignupForm.php(47): yii\base\Model->validate()
+#20 D:\jsf\htdocs\Yii1\frontend\controllers\SiteController.php(156): frontend\models\SignupForm->signup()
+#21 [internal function]: frontend\controllers\SiteController->actionSignup()
+#22 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#23 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\base\Controller.php(180): yii\base\InlineAction->runWithParams(Array)
+#24 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('signup', Array)
+#25 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('site/signup', Array)
+#26 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#27 D:\jsf\htdocs\Yii1\frontend\web\index.php(17): yii\base\Application->run()
+#28 {main}
+Additional Information:
+
+2020-11-24 15:25:40 [::1][-][sfh9l7pr25gtrp546hr051cb5t][info][application] $_GET = [
+    'r' => 'site/signup'
+]
+
+$_POST = [
+    '_csrf-frontend' => 'Hv_UKUzYXAV2PWARlHrWDIfSRh8JY1J7KPy0dTTeb3YmipBdCKhoWiRkUknCFpo78oAMTXoVAh14zfcaTKYiOQ=='
+    'SignupForm' => [
+        'username' => 'admin'
+        'email' => 'phamthidieulinh24102000@gmail.com'
+        'password' => 'Linh241@'
+    ]
+    'signup-button' => ''
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    '_identity-frontend' => '58e5f35f6789d3c3355709121e7d9c466f4905a83ce51b860e306071e49f3f37a:2:{i:0;s:18:\"_identity-frontend\";i:1;s:46:\"[1,\"umS8Patjg6rcauILY0WFr7q3KAaQk5Ju\",2592000]\";}'
+    'advanced-frontend' => 'sfh9l7pr25gtrp546hr051cb5t'
+    '_csrf-frontend' => 'ce3bd25f4b566f0108d947947693b6cdcaa5d3fb19f2eff3d2630f7e5dd29569a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"8uDtDp4_RY2XVlL7uRJRsvPfP1CoxxMO\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__captcha/site/captcha' => 'mxnoda'
+    '__captcha/site/captchacount' => 1
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/jsf/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/jsf/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '247'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_ORIGIN' => 'http://localhost'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/yii1/frontend/web/index.php?r=site%2Fsignup'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'vi-VN,vi;q=0.9,fr-FR;q=0.8,fr;q=0.7,en-US;q=0.6,en;q=0.5'
+    'HTTP_COOKIE' => '_identity-frontend=58e5f35f6789d3c3355709121e7d9c466f4905a83ce51b860e306071e49f3f37a%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22umS8Patjg6rcauILY0WFr7q3KAaQk5Ju%22%2C2592000%5D%22%3B%7D; advanced-frontend=sfh9l7pr25gtrp546hr051cb5t; _csrf-frontend=ce3bd25f4b566f0108d947947693b6cdcaa5d3fb19f2eff3d2630f7e5dd29569a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%228uDtDp4_RY2XVlL7uRJRsvPfP1CoxxMO%22%3B%7D'
+    'PATH' => 'C:\\Python39\\Scripts\\;C:\\Python39\\;c:\\Program Files\\Java\\jdk1.8.0_191\\bin;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\iCLS\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\iCLS\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\WINDOWS\\System32\\OpenSSH\\;\"C:\\Users\\admin\\Downloads\\JDK\\bin;\";C:\\Program Files\\nodejs\\;C:\\ProgramData\\chocolatey\\bin;C:\\Program Files\\Git\\cmd;D:\\Python\\Scripts\\;D:\\Python\\;C:\\Users\\admin\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\admin\\AppData\\Local\\Programs\\Microsoft VS Code\\bin;C:\\Users\\admin\\AppData\\Local\\GitHubDesktop\\bin;C:\\Program Files\\JetBrains\\WebStorm 2020.2.3\\bin;D:\\jsf\\php;C:\\Users\\admin\\AppData\\Roaming\\npm;C:\\Users\\admin\\AppData\\Local\\atom\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/jsf/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/jsf/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/jsf/htdocs/Yii1/frontend/web/index.php'
+    'REMOTE_PORT' => '55364'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=site%2Fsignup'
+    'REQUEST_URI' => '/yii1/frontend/web/index.php?r=site%2Fsignup'
+    'SCRIPT_NAME' => '/yii1/frontend/web/index.php'
+    'PHP_SELF' => '/yii1/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1606227940.645
+    'REQUEST_TIME' => 1606227940
+]
+2020-11-24 15:59:36 [::1][-][sfh9l7pr25gtrp546hr051cb5t][error][Swift_TransportException] Swift_TransportException: Connection could not be established with host localhost :stream_socket_client(): unable to connect to tcp://localhost:587 (No connection could be made because the target machine actively refused it.
+) in D:\jsf\htdocs\Yii1\vendor\swiftmailer\swiftmailer\lib\classes\Swift\Transport\StreamBuffer.php:269
+Stack trace:
+#0 [internal function]: Swift_Transport_StreamBuffer->{closure}(2, 'stream_socket_c...', 'D:\\jsf\\htdocs\\Y...', 272, Array)
+#1 D:\jsf\htdocs\Yii1\vendor\swiftmailer\swiftmailer\lib\classes\Swift\Transport\StreamBuffer.php(272): stream_socket_client('tcp://localhost...', '<span class="nu...', '<span class="st...', 30, 4, Resource id #271)
+#2 D:\jsf\htdocs\Yii1\vendor\swiftmailer\swiftmailer\lib\classes\Swift\Transport\StreamBuffer.php(58): Swift_Transport_StreamBuffer->establishSocketConnection()
+#3 D:\jsf\htdocs\Yii1\vendor\swiftmailer\swiftmailer\lib\classes\Swift\Transport\AbstractSmtpTransport.php(143): Swift_Transport_StreamBuffer->initialize(Array)
+#4 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2-swiftmailer\src\Mailer.php(113): Swift_Transport_AbstractSmtpTransport->start()
+#5 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2-swiftmailer\src\Mailer.php(156): yii\swiftmailer\Mailer->getSwiftMailer()
+#6 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\mail\BaseMailer.php(263): yii\swiftmailer\Mailer->sendMessage(Object(yii\swiftmailer\Message))
+#7 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\mail\BaseMessage.php(49): yii\mail\BaseMailer->send(Object(yii\swiftmailer\Message))
+#8 D:\jsf\htdocs\Yii1\frontend\models\ResendVerificationEmailForm.php(60): yii\mail\BaseMessage->send()
+#9 D:\jsf\htdocs\Yii1\frontend\controllers\SiteController.php(249): frontend\models\ResendVerificationEmailForm->sendEmail()
+#10 [internal function]: frontend\controllers\SiteController->actionResendVerificationEmail()
+#11 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#12 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\base\Controller.php(180): yii\base\InlineAction->runWithParams(Array)
+#13 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('resend-verifica...', Array)
+#14 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('site/resend-ver...', Array)
+#15 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#16 D:\jsf\htdocs\Yii1\frontend\web\index.php(17): yii\base\Application->run()
+#17 {main}
+2020-11-24 15:59:28 [::1][-][sfh9l7pr25gtrp546hr051cb5t][info][application] $_GET = [
+    'r' => 'site/resend-verification-email'
+]
+
+$_POST = [
+    '_csrf-frontend' => 'kJO_U4R2VLNJqS1tRXj6M0OGxfazJ9T9wdZ8sTtrUCKo5vsnwAZg7BvwHzUTFLYENtSPpMBRhJuR5z_eQxMdbQ=='
+    'ResendVerificationEmailForm' => [
+        'email' => 'linh@mailinator.com'
+    ]
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    '_identity-frontend' => '58e5f35f6789d3c3355709121e7d9c466f4905a83ce51b860e306071e49f3f37a:2:{i:0;s:18:\"_identity-frontend\";i:1;s:46:\"[1,\"umS8Patjg6rcauILY0WFr7q3KAaQk5Ju\",2592000]\";}'
+    'advanced-frontend' => 'sfh9l7pr25gtrp546hr051cb5t'
+    '_csrf-frontend' => 'ce3bd25f4b566f0108d947947693b6cdcaa5d3fb19f2eff3d2630f7e5dd29569a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"8uDtDp4_RY2XVlL7uRJRsvPfP1CoxxMO\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__captcha/site/captcha' => 'mxnoda'
+    '__captcha/site/captchacount' => 1
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/jsf/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/jsf/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '168'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_ORIGIN' => 'http://localhost'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/yii1/frontend/web/index.php?r=site%2Fresend-verification-email'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'vi-VN,vi;q=0.9,fr-FR;q=0.8,fr;q=0.7,en-US;q=0.6,en;q=0.5'
+    'HTTP_COOKIE' => '_identity-frontend=58e5f35f6789d3c3355709121e7d9c466f4905a83ce51b860e306071e49f3f37a%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22umS8Patjg6rcauILY0WFr7q3KAaQk5Ju%22%2C2592000%5D%22%3B%7D; advanced-frontend=sfh9l7pr25gtrp546hr051cb5t; _csrf-frontend=ce3bd25f4b566f0108d947947693b6cdcaa5d3fb19f2eff3d2630f7e5dd29569a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%228uDtDp4_RY2XVlL7uRJRsvPfP1CoxxMO%22%3B%7D'
+    'PATH' => 'C:\\Python39\\Scripts\\;C:\\Python39\\;c:\\Program Files\\Java\\jdk1.8.0_191\\bin;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\iCLS\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\iCLS\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\WINDOWS\\System32\\OpenSSH\\;\"C:\\Users\\admin\\Downloads\\JDK\\bin;\";C:\\Program Files\\nodejs\\;C:\\ProgramData\\chocolatey\\bin;C:\\Program Files\\Git\\cmd;D:\\Python\\Scripts\\;D:\\Python\\;C:\\Users\\admin\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\admin\\AppData\\Local\\Programs\\Microsoft VS Code\\bin;C:\\Users\\admin\\AppData\\Local\\GitHubDesktop\\bin;C:\\Program Files\\JetBrains\\WebStorm 2020.2.3\\bin;D:\\jsf\\php;C:\\Users\\admin\\AppData\\Roaming\\npm;C:\\Users\\admin\\AppData\\Local\\atom\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/jsf/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/jsf/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/jsf/htdocs/Yii1/frontend/web/index.php'
+    'REMOTE_PORT' => '55851'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=site%2Fresend-verification-email'
+    'REQUEST_URI' => '/yii1/frontend/web/index.php?r=site%2Fresend-verification-email'
+    'SCRIPT_NAME' => '/yii1/frontend/web/index.php'
+    'PHP_SELF' => '/yii1/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1606229968.296
+    'REQUEST_TIME' => 1606229968
+]
+2020-11-24 16:02:01 [::1][-][sfh9l7pr25gtrp546hr051cb5t][error][Swift_TransportException] Swift_TransportException: Connection could not be established with host localhost :stream_socket_client(): unable to connect to tcp://localhost:587 (No connection could be made because the target machine actively refused it.
+) in D:\jsf\htdocs\Yii1\vendor\swiftmailer\swiftmailer\lib\classes\Swift\Transport\StreamBuffer.php:269
+Stack trace:
+#0 [internal function]: Swift_Transport_StreamBuffer->{closure}(2, 'stream_socket_c...', 'D:\\jsf\\htdocs\\Y...', 272, Array)
+#1 D:\jsf\htdocs\Yii1\vendor\swiftmailer\swiftmailer\lib\classes\Swift\Transport\StreamBuffer.php(272): stream_socket_client('tcp://localhost...', '<span class="nu...', '<span class="st...', 30, 4, Resource id #271)
+#2 D:\jsf\htdocs\Yii1\vendor\swiftmailer\swiftmailer\lib\classes\Swift\Transport\StreamBuffer.php(58): Swift_Transport_StreamBuffer->establishSocketConnection()
+#3 D:\jsf\htdocs\Yii1\vendor\swiftmailer\swiftmailer\lib\classes\Swift\Transport\AbstractSmtpTransport.php(143): Swift_Transport_StreamBuffer->initialize(Array)
+#4 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2-swiftmailer\src\Mailer.php(113): Swift_Transport_AbstractSmtpTransport->start()
+#5 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2-swiftmailer\src\Mailer.php(156): yii\swiftmailer\Mailer->getSwiftMailer()
+#6 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\mail\BaseMailer.php(263): yii\swiftmailer\Mailer->sendMessage(Object(yii\swiftmailer\Message))
+#7 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\mail\BaseMessage.php(49): yii\mail\BaseMailer->send(Object(yii\swiftmailer\Message))
+#8 D:\jsf\htdocs\Yii1\frontend\models\ResendVerificationEmailForm.php(60): yii\mail\BaseMessage->send()
+#9 D:\jsf\htdocs\Yii1\frontend\controllers\SiteController.php(249): frontend\models\ResendVerificationEmailForm->sendEmail()
+#10 [internal function]: frontend\controllers\SiteController->actionResendVerificationEmail()
+#11 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#12 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\base\Controller.php(180): yii\base\InlineAction->runWithParams(Array)
+#13 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('resend-verifica...', Array)
+#14 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('site/resend-ver...', Array)
+#15 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#16 D:\jsf\htdocs\Yii1\frontend\web\index.php(17): yii\base\Application->run()
+#17 {main}
+2020-11-24 16:01:53 [::1][-][sfh9l7pr25gtrp546hr051cb5t][info][application] $_GET = [
+    'r' => 'site/resend-verification-email'
+]
+
+$_POST = [
+    '_csrf-frontend' => 'KA8qI78NDahmu-AHkqgf7tjb13GaYpISDgK4V1M2TawQem5X-3059zTi0l_ExFPZrYmdI-kUwnReM_s4K04A4w=='
+    'ResendVerificationEmailForm' => [
+        'email' => 'linh@mailinator.com'
+    ]
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    '_identity-frontend' => '58e5f35f6789d3c3355709121e7d9c466f4905a83ce51b860e306071e49f3f37a:2:{i:0;s:18:\"_identity-frontend\";i:1;s:46:\"[1,\"umS8Patjg6rcauILY0WFr7q3KAaQk5Ju\",2592000]\";}'
+    'advanced-frontend' => 'sfh9l7pr25gtrp546hr051cb5t'
+    '_csrf-frontend' => 'ce3bd25f4b566f0108d947947693b6cdcaa5d3fb19f2eff3d2630f7e5dd29569a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"8uDtDp4_RY2XVlL7uRJRsvPfP1CoxxMO\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__captcha/site/captcha' => 'mxnoda'
+    '__captcha/site/captchacount' => 1
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/jsf/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/jsf/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '168'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_ORIGIN' => 'http://localhost'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/yii1/frontend/web/index.php?r=site%2Fresend-verification-email'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'vi-VN,vi;q=0.9,fr-FR;q=0.8,fr;q=0.7,en-US;q=0.6,en;q=0.5'
+    'HTTP_COOKIE' => '_identity-frontend=58e5f35f6789d3c3355709121e7d9c466f4905a83ce51b860e306071e49f3f37a%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22umS8Patjg6rcauILY0WFr7q3KAaQk5Ju%22%2C2592000%5D%22%3B%7D; advanced-frontend=sfh9l7pr25gtrp546hr051cb5t; _csrf-frontend=ce3bd25f4b566f0108d947947693b6cdcaa5d3fb19f2eff3d2630f7e5dd29569a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%228uDtDp4_RY2XVlL7uRJRsvPfP1CoxxMO%22%3B%7D'
+    'PATH' => 'C:\\Python39\\Scripts\\;C:\\Python39\\;c:\\Program Files\\Java\\jdk1.8.0_191\\bin;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\iCLS\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\iCLS\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\WINDOWS\\System32\\OpenSSH\\;\"C:\\Users\\admin\\Downloads\\JDK\\bin;\";C:\\Program Files\\nodejs\\;C:\\ProgramData\\chocolatey\\bin;C:\\Program Files\\Git\\cmd;D:\\Python\\Scripts\\;D:\\Python\\;C:\\Users\\admin\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\admin\\AppData\\Local\\Programs\\Microsoft VS Code\\bin;C:\\Users\\admin\\AppData\\Local\\GitHubDesktop\\bin;C:\\Program Files\\JetBrains\\WebStorm 2020.2.3\\bin;D:\\jsf\\php;C:\\Users\\admin\\AppData\\Roaming\\npm;C:\\Users\\admin\\AppData\\Local\\atom\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/jsf/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/jsf/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/jsf/htdocs/Yii1/frontend/web/index.php'
+    'REMOTE_PORT' => '55902'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=site%2Fresend-verification-email'
+    'REQUEST_URI' => '/yii1/frontend/web/index.php?r=site%2Fresend-verification-email'
+    'SCRIPT_NAME' => '/yii1/frontend/web/index.php'
+    'PHP_SELF' => '/yii1/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1606230113.484
+    'REQUEST_TIME' => 1606230113
+]
+2020-11-24 16:06:14 [::1][-][sfh9l7pr25gtrp546hr051cb5t][error][Swift_TransportException] Swift_TransportException: Failed to authenticate on SMTP server with username "phamthidieulinh24102000@gmail.com" using 3 possible authenticators. Authenticator LOGIN returned Expected response code 235 but got code "535", with message "535-5.7.8 Username and Password not accepted. Learn more at
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials ne22sm3520682pjb.45 - gsmtp
+". Authenticator PLAIN returned Expected response code 235 but got code "535", with message "535-5.7.8 Username and Password not accepted. Learn more at
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials ne22sm3520682pjb.45 - gsmtp
+". Authenticator XOAUTH2 returned Expected response code 250 but got code "535", with message "535-5.7.8 Username and Password not accepted. Learn more at
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials ne22sm3520682pjb.45 - gsmtp
+". in D:\jsf\htdocs\Yii1\vendor\swiftmailer\swiftmailer\lib\classes\Swift\Transport\Esmtp\AuthHandler.php:191
+Stack trace:
+#0 D:\jsf\htdocs\Yii1\vendor\swiftmailer\swiftmailer\lib\classes\Swift\Transport\EsmtpTransport.php(371): Swift_Transport_Esmtp_AuthHandler->afterEhlo(Object(Swift_SmtpTransport))
+#1 D:\jsf\htdocs\Yii1\vendor\swiftmailer\swiftmailer\lib\classes\Swift\Transport\AbstractSmtpTransport.php(148): Swift_Transport_EsmtpTransport->doHeloCommand()
+#2 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2-swiftmailer\src\Mailer.php(113): Swift_Transport_AbstractSmtpTransport->start()
+#3 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2-swiftmailer\src\Mailer.php(156): yii\swiftmailer\Mailer->getSwiftMailer()
+#4 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\mail\BaseMailer.php(263): yii\swiftmailer\Mailer->sendMessage(Object(yii\swiftmailer\Message))
+#5 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\mail\BaseMessage.php(49): yii\mail\BaseMailer->send(Object(yii\swiftmailer\Message))
+#6 D:\jsf\htdocs\Yii1\frontend\models\ResendVerificationEmailForm.php(60): yii\mail\BaseMessage->send()
+#7 D:\jsf\htdocs\Yii1\frontend\controllers\SiteController.php(249): frontend\models\ResendVerificationEmailForm->sendEmail()
+#8 [internal function]: frontend\controllers\SiteController->actionResendVerificationEmail()
+#9 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#10 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\base\Controller.php(180): yii\base\InlineAction->runWithParams(Array)
+#11 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('resend-verifica...', Array)
+#12 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('site/resend-ver...', Array)
+#13 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#14 D:\jsf\htdocs\Yii1\frontend\web\index.php(17): yii\base\Application->run()
+#15 {main}
+2020-11-24 16:06:04 [::1][-][sfh9l7pr25gtrp546hr051cb5t][info][application] $_GET = [
+    'r' => 'site/resend-verification-email'
+]
+
+$_POST = [
+    '_csrf-frontend' => 'krr6ceH-XT-xFKa8syI1VOSxw147CRl8P8kQ6J1PNqmqz74FpY5pYONNlOTlTnljkeOJDEh_SRpv-FOH5Td75g=='
+    'ResendVerificationEmailForm' => [
+        'email' => 'linh@mailinator.com'
+    ]
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    '_identity-frontend' => '58e5f35f6789d3c3355709121e7d9c466f4905a83ce51b860e306071e49f3f37a:2:{i:0;s:18:\"_identity-frontend\";i:1;s:46:\"[1,\"umS8Patjg6rcauILY0WFr7q3KAaQk5Ju\",2592000]\";}'
+    'advanced-frontend' => 'sfh9l7pr25gtrp546hr051cb5t'
+    '_csrf-frontend' => 'ce3bd25f4b566f0108d947947693b6cdcaa5d3fb19f2eff3d2630f7e5dd29569a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"8uDtDp4_RY2XVlL7uRJRsvPfP1CoxxMO\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__captcha/site/captcha' => 'mxnoda'
+    '__captcha/site/captchacount' => 1
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/jsf/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/jsf/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '168'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_ORIGIN' => 'http://localhost'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/yii1/frontend/web/index.php?r=site%2Fresend-verification-email'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'vi-VN,vi;q=0.9,fr-FR;q=0.8,fr;q=0.7,en-US;q=0.6,en;q=0.5'
+    'HTTP_COOKIE' => '_identity-frontend=58e5f35f6789d3c3355709121e7d9c466f4905a83ce51b860e306071e49f3f37a%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22umS8Patjg6rcauILY0WFr7q3KAaQk5Ju%22%2C2592000%5D%22%3B%7D; advanced-frontend=sfh9l7pr25gtrp546hr051cb5t; _csrf-frontend=ce3bd25f4b566f0108d947947693b6cdcaa5d3fb19f2eff3d2630f7e5dd29569a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%228uDtDp4_RY2XVlL7uRJRsvPfP1CoxxMO%22%3B%7D'
+    'PATH' => 'C:\\Python39\\Scripts\\;C:\\Python39\\;c:\\Program Files\\Java\\jdk1.8.0_191\\bin;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\iCLS\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\iCLS\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\WINDOWS\\System32\\OpenSSH\\;\"C:\\Users\\admin\\Downloads\\JDK\\bin;\";C:\\Program Files\\nodejs\\;C:\\ProgramData\\chocolatey\\bin;C:\\Program Files\\Git\\cmd;D:\\Python\\Scripts\\;D:\\Python\\;C:\\Users\\admin\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\admin\\AppData\\Local\\Programs\\Microsoft VS Code\\bin;C:\\Users\\admin\\AppData\\Local\\GitHubDesktop\\bin;C:\\Program Files\\JetBrains\\WebStorm 2020.2.3\\bin;D:\\jsf\\php;C:\\Users\\admin\\AppData\\Roaming\\npm;C:\\Users\\admin\\AppData\\Local\\atom\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/jsf/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/jsf/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/jsf/htdocs/Yii1/frontend/web/index.php'
+    'REMOTE_PORT' => '55959'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=site%2Fresend-verification-email'
+    'REQUEST_URI' => '/yii1/frontend/web/index.php?r=site%2Fresend-verification-email'
+    'SCRIPT_NAME' => '/yii1/frontend/web/index.php'
+    'PHP_SELF' => '/yii1/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1606230364.785
+    'REQUEST_TIME' => 1606230364
+]
+2020-11-24 16:11:21 [::1][-][sfh9l7pr25gtrp546hr051cb5t][error][Swift_TransportException] Swift_TransportException: Connection could not be established with host smtp.gmail.com :stream_socket_client(): unable to connect to starttls://smtp.gmail.com:587 (Unable to find the socket transport &quot;starttls&quot; - did you forget to enable it when you configured PHP?) in D:\jsf\htdocs\Yii1\vendor\swiftmailer\swiftmailer\lib\classes\Swift\Transport\StreamBuffer.php:269
+Stack trace:
+#0 [internal function]: Swift_Transport_StreamBuffer->{closure}(2, 'stream_socket_c...', 'D:\\jsf\\htdocs\\Y...', 272, Array)
+#1 D:\jsf\htdocs\Yii1\vendor\swiftmailer\swiftmailer\lib\classes\Swift\Transport\StreamBuffer.php(272): stream_socket_client('starttls://smtp...', '<span class="nu...', '<span class="st...', 30, 4, Resource id #270)
+#2 D:\jsf\htdocs\Yii1\vendor\swiftmailer\swiftmailer\lib\classes\Swift\Transport\StreamBuffer.php(58): Swift_Transport_StreamBuffer->establishSocketConnection()
+#3 D:\jsf\htdocs\Yii1\vendor\swiftmailer\swiftmailer\lib\classes\Swift\Transport\AbstractSmtpTransport.php(143): Swift_Transport_StreamBuffer->initialize(Array)
+#4 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2-swiftmailer\src\Mailer.php(113): Swift_Transport_AbstractSmtpTransport->start()
+#5 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2-swiftmailer\src\Mailer.php(156): yii\swiftmailer\Mailer->getSwiftMailer()
+#6 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\mail\BaseMailer.php(263): yii\swiftmailer\Mailer->sendMessage(Object(yii\swiftmailer\Message))
+#7 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\mail\BaseMessage.php(49): yii\mail\BaseMailer->send(Object(yii\swiftmailer\Message))
+#8 D:\jsf\htdocs\Yii1\frontend\models\ResendVerificationEmailForm.php(60): yii\mail\BaseMessage->send()
+#9 D:\jsf\htdocs\Yii1\frontend\controllers\SiteController.php(249): frontend\models\ResendVerificationEmailForm->sendEmail()
+#10 [internal function]: frontend\controllers\SiteController->actionResendVerificationEmail()
+#11 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#12 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\base\Controller.php(180): yii\base\InlineAction->runWithParams(Array)
+#13 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('resend-verifica...', Array)
+#14 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('site/resend-ver...', Array)
+#15 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#16 D:\jsf\htdocs\Yii1\frontend\web\index.php(17): yii\base\Application->run()
+#17 {main}
+2020-11-24 16:11:21 [::1][-][sfh9l7pr25gtrp546hr051cb5t][info][application] $_GET = [
+    'r' => 'site/resend-verification-email'
+]
+
+$_POST = [
+    '_csrf-frontend' => 'cEqhUdZyY_mUxL4tvCQbyhKVbxFJBBSOgLQkA8HnFVpIP-UlkgJXpsadjHXqSFf9Z8clQzpyROjQhWdsuZ9YFQ=='
+    'ResendVerificationEmailForm' => [
+        'email' => 'linh@mailinator.com'
+    ]
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    '_identity-frontend' => '58e5f35f6789d3c3355709121e7d9c466f4905a83ce51b860e306071e49f3f37a:2:{i:0;s:18:\"_identity-frontend\";i:1;s:46:\"[1,\"umS8Patjg6rcauILY0WFr7q3KAaQk5Ju\",2592000]\";}'
+    'advanced-frontend' => 'sfh9l7pr25gtrp546hr051cb5t'
+    '_csrf-frontend' => 'ce3bd25f4b566f0108d947947693b6cdcaa5d3fb19f2eff3d2630f7e5dd29569a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"8uDtDp4_RY2XVlL7uRJRsvPfP1CoxxMO\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__captcha/site/captcha' => 'mxnoda'
+    '__captcha/site/captchacount' => 1
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/jsf/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/jsf/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '168'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_ORIGIN' => 'http://localhost'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/yii1/frontend/web/index.php?r=site%2Fresend-verification-email'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'vi-VN,vi;q=0.9,fr-FR;q=0.8,fr;q=0.7,en-US;q=0.6,en;q=0.5'
+    'HTTP_COOKIE' => '_identity-frontend=58e5f35f6789d3c3355709121e7d9c466f4905a83ce51b860e306071e49f3f37a%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22umS8Patjg6rcauILY0WFr7q3KAaQk5Ju%22%2C2592000%5D%22%3B%7D; advanced-frontend=sfh9l7pr25gtrp546hr051cb5t; _csrf-frontend=ce3bd25f4b566f0108d947947693b6cdcaa5d3fb19f2eff3d2630f7e5dd29569a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%228uDtDp4_RY2XVlL7uRJRsvPfP1CoxxMO%22%3B%7D'
+    'PATH' => 'C:\\Python39\\Scripts\\;C:\\Python39\\;c:\\Program Files\\Java\\jdk1.8.0_191\\bin;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\iCLS\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\iCLS\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\WINDOWS\\System32\\OpenSSH\\;\"C:\\Users\\admin\\Downloads\\JDK\\bin;\";C:\\Program Files\\nodejs\\;C:\\ProgramData\\chocolatey\\bin;C:\\Program Files\\Git\\cmd;D:\\Python\\Scripts\\;D:\\Python\\;C:\\Users\\admin\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\admin\\AppData\\Local\\Programs\\Microsoft VS Code\\bin;C:\\Users\\admin\\AppData\\Local\\GitHubDesktop\\bin;C:\\Program Files\\JetBrains\\WebStorm 2020.2.3\\bin;D:\\jsf\\php;C:\\Users\\admin\\AppData\\Roaming\\npm;C:\\Users\\admin\\AppData\\Local\\atom\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/jsf/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/jsf/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/jsf/htdocs/Yii1/frontend/web/index.php'
+    'REMOTE_PORT' => '56040'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=site%2Fresend-verification-email'
+    'REQUEST_URI' => '/yii1/frontend/web/index.php?r=site%2Fresend-verification-email'
+    'SCRIPT_NAME' => '/yii1/frontend/web/index.php'
+    'PHP_SELF' => '/yii1/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1606230680.989
+    'REQUEST_TIME' => 1606230680
+]
+2020-11-24 16:11:34 [::1][-][sfh9l7pr25gtrp546hr051cb5t][error][Swift_TransportException] Swift_TransportException: Connection could not be established with host smtp.gmail.com :stream_socket_client(): unable to connect to starttls://smtp.gmail.com:587 (Unable to find the socket transport &quot;starttls&quot; - did you forget to enable it when you configured PHP?) in D:\jsf\htdocs\Yii1\vendor\swiftmailer\swiftmailer\lib\classes\Swift\Transport\StreamBuffer.php:269
+Stack trace:
+#0 [internal function]: Swift_Transport_StreamBuffer->{closure}(2, 'stream_socket_c...', 'D:\\jsf\\htdocs\\Y...', 272, Array)
+#1 D:\jsf\htdocs\Yii1\vendor\swiftmailer\swiftmailer\lib\classes\Swift\Transport\StreamBuffer.php(272): stream_socket_client('starttls://smtp...', '<span class="nu...', '<span class="st...', 30, 4, Resource id #270)
+#2 D:\jsf\htdocs\Yii1\vendor\swiftmailer\swiftmailer\lib\classes\Swift\Transport\StreamBuffer.php(58): Swift_Transport_StreamBuffer->establishSocketConnection()
+#3 D:\jsf\htdocs\Yii1\vendor\swiftmailer\swiftmailer\lib\classes\Swift\Transport\AbstractSmtpTransport.php(143): Swift_Transport_StreamBuffer->initialize(Array)
+#4 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2-swiftmailer\src\Mailer.php(113): Swift_Transport_AbstractSmtpTransport->start()
+#5 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2-swiftmailer\src\Mailer.php(156): yii\swiftmailer\Mailer->getSwiftMailer()
+#6 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\mail\BaseMailer.php(263): yii\swiftmailer\Mailer->sendMessage(Object(yii\swiftmailer\Message))
+#7 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\mail\BaseMessage.php(49): yii\mail\BaseMailer->send(Object(yii\swiftmailer\Message))
+#8 D:\jsf\htdocs\Yii1\frontend\models\ResendVerificationEmailForm.php(60): yii\mail\BaseMessage->send()
+#9 D:\jsf\htdocs\Yii1\frontend\controllers\SiteController.php(249): frontend\models\ResendVerificationEmailForm->sendEmail()
+#10 [internal function]: frontend\controllers\SiteController->actionResendVerificationEmail()
+#11 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#12 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\base\Controller.php(180): yii\base\InlineAction->runWithParams(Array)
+#13 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('resend-verifica...', Array)
+#14 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('site/resend-ver...', Array)
+#15 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#16 D:\jsf\htdocs\Yii1\frontend\web\index.php(17): yii\base\Application->run()
+#17 {main}
+2020-11-24 16:11:34 [::1][-][sfh9l7pr25gtrp546hr051cb5t][info][application] $_GET = [
+    'r' => 'site/resend-verification-email'
+]
+
+$_POST = [
+    '_csrf-frontend' => 'VjWLt_qFTE5r0QTCSnkaxCxos8v7LfYQgYCTPAJQNr9uQM_DvvV4ETmINpocFVbzWTr5mYhbpnbRsdBTeih78A=='
+    'ResendVerificationEmailForm' => [
+        'email' => 'linh@mailinator.com'
+    ]
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    '_identity-frontend' => '58e5f35f6789d3c3355709121e7d9c466f4905a83ce51b860e306071e49f3f37a:2:{i:0;s:18:\"_identity-frontend\";i:1;s:46:\"[1,\"umS8Patjg6rcauILY0WFr7q3KAaQk5Ju\",2592000]\";}'
+    'advanced-frontend' => 'sfh9l7pr25gtrp546hr051cb5t'
+    '_csrf-frontend' => 'ce3bd25f4b566f0108d947947693b6cdcaa5d3fb19f2eff3d2630f7e5dd29569a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"8uDtDp4_RY2XVlL7uRJRsvPfP1CoxxMO\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__captcha/site/captcha' => 'mxnoda'
+    '__captcha/site/captchacount' => 1
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/jsf/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/jsf/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '168'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_ORIGIN' => 'http://localhost'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/yii1/frontend/web/index.php?r=site%2Fresend-verification-email'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'vi-VN,vi;q=0.9,fr-FR;q=0.8,fr;q=0.7,en-US;q=0.6,en;q=0.5'
+    'HTTP_COOKIE' => '_identity-frontend=58e5f35f6789d3c3355709121e7d9c466f4905a83ce51b860e306071e49f3f37a%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22umS8Patjg6rcauILY0WFr7q3KAaQk5Ju%22%2C2592000%5D%22%3B%7D; advanced-frontend=sfh9l7pr25gtrp546hr051cb5t; _csrf-frontend=ce3bd25f4b566f0108d947947693b6cdcaa5d3fb19f2eff3d2630f7e5dd29569a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%228uDtDp4_RY2XVlL7uRJRsvPfP1CoxxMO%22%3B%7D'
+    'PATH' => 'C:\\Python39\\Scripts\\;C:\\Python39\\;c:\\Program Files\\Java\\jdk1.8.0_191\\bin;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\iCLS\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\iCLS\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\WINDOWS\\System32\\OpenSSH\\;\"C:\\Users\\admin\\Downloads\\JDK\\bin;\";C:\\Program Files\\nodejs\\;C:\\ProgramData\\chocolatey\\bin;C:\\Program Files\\Git\\cmd;D:\\Python\\Scripts\\;D:\\Python\\;C:\\Users\\admin\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\admin\\AppData\\Local\\Programs\\Microsoft VS Code\\bin;C:\\Users\\admin\\AppData\\Local\\GitHubDesktop\\bin;C:\\Program Files\\JetBrains\\WebStorm 2020.2.3\\bin;D:\\jsf\\php;C:\\Users\\admin\\AppData\\Roaming\\npm;C:\\Users\\admin\\AppData\\Local\\atom\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/jsf/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/jsf/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/jsf/htdocs/Yii1/frontend/web/index.php'
+    'REMOTE_PORT' => '56044'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=site%2Fresend-verification-email'
+    'REQUEST_URI' => '/yii1/frontend/web/index.php?r=site%2Fresend-verification-email'
+    'SCRIPT_NAME' => '/yii1/frontend/web/index.php'
+    'PHP_SELF' => '/yii1/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1606230694.559
+    'REQUEST_TIME' => 1606230694
+]
+2020-11-24 16:13:48 [::1][-][sfh9l7pr25gtrp546hr051cb5t][error][Swift_TransportException] Swift_TransportException: Failed to authenticate on SMTP server with username "phamthidieulinh24102000@gmail.com" using 3 possible authenticators. Authenticator LOGIN returned Expected response code 235 but got code "535", with message "535-5.7.8 Username and Password not accepted. Learn more at
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials b80sm14997435pfb.40 - gsmtp
+". Authenticator PLAIN returned Expected response code 235 but got code "535", with message "535-5.7.8 Username and Password not accepted. Learn more at
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials b80sm14997435pfb.40 - gsmtp
+". Authenticator XOAUTH2 returned Expected response code 250 but got code "535", with message "535-5.7.8 Username and Password not accepted. Learn more at
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials b80sm14997435pfb.40 - gsmtp
+". in D:\jsf\htdocs\Yii1\vendor\swiftmailer\swiftmailer\lib\classes\Swift\Transport\Esmtp\AuthHandler.php:191
+Stack trace:
+#0 D:\jsf\htdocs\Yii1\vendor\swiftmailer\swiftmailer\lib\classes\Swift\Transport\EsmtpTransport.php(371): Swift_Transport_Esmtp_AuthHandler->afterEhlo(Object(Swift_SmtpTransport))
+#1 D:\jsf\htdocs\Yii1\vendor\swiftmailer\swiftmailer\lib\classes\Swift\Transport\AbstractSmtpTransport.php(148): Swift_Transport_EsmtpTransport->doHeloCommand()
+#2 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2-swiftmailer\src\Mailer.php(113): Swift_Transport_AbstractSmtpTransport->start()
+#3 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2-swiftmailer\src\Mailer.php(156): yii\swiftmailer\Mailer->getSwiftMailer()
+#4 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\mail\BaseMailer.php(263): yii\swiftmailer\Mailer->sendMessage(Object(yii\swiftmailer\Message))
+#5 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\mail\BaseMessage.php(49): yii\mail\BaseMailer->send(Object(yii\swiftmailer\Message))
+#6 D:\jsf\htdocs\Yii1\frontend\models\ResendVerificationEmailForm.php(60): yii\mail\BaseMessage->send()
+#7 D:\jsf\htdocs\Yii1\frontend\controllers\SiteController.php(249): frontend\models\ResendVerificationEmailForm->sendEmail()
+#8 [internal function]: frontend\controllers\SiteController->actionResendVerificationEmail()
+#9 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#10 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\base\Controller.php(180): yii\base\InlineAction->runWithParams(Array)
+#11 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('resend-verifica...', Array)
+#12 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('site/resend-ver...', Array)
+#13 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#14 D:\jsf\htdocs\Yii1\frontend\web\index.php(17): yii\base\Application->run()
+#15 {main}
+2020-11-24 16:13:39 [::1][-][sfh9l7pr25gtrp546hr051cb5t][info][application] $_GET = [
+    'r' => 'site/resend-verification-email'
+]
+
+$_POST = [
+    '_csrf-frontend' => 'YR0fQ3E2fndMXp0SPtGvdcGI1apo_9LcD9hzO1UeXCNZaFs3NUZKKB4Hr0poveNCtNqf-BuJgrpf6TBULWYRbA=='
+    'ResendVerificationEmailForm' => [
+        'email' => 'linh@mailinator.com'
+    ]
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    '_identity-frontend' => '58e5f35f6789d3c3355709121e7d9c466f4905a83ce51b860e306071e49f3f37a:2:{i:0;s:18:\"_identity-frontend\";i:1;s:46:\"[1,\"umS8Patjg6rcauILY0WFr7q3KAaQk5Ju\",2592000]\";}'
+    'advanced-frontend' => 'sfh9l7pr25gtrp546hr051cb5t'
+    '_csrf-frontend' => 'ce3bd25f4b566f0108d947947693b6cdcaa5d3fb19f2eff3d2630f7e5dd29569a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"8uDtDp4_RY2XVlL7uRJRsvPfP1CoxxMO\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__captcha/site/captcha' => 'mxnoda'
+    '__captcha/site/captchacount' => 1
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/jsf/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/jsf/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '168'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_ORIGIN' => 'http://localhost'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/yii1/frontend/web/index.php?r=site%2Fresend-verification-email'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'vi-VN,vi;q=0.9,fr-FR;q=0.8,fr;q=0.7,en-US;q=0.6,en;q=0.5'
+    'HTTP_COOKIE' => '_identity-frontend=58e5f35f6789d3c3355709121e7d9c466f4905a83ce51b860e306071e49f3f37a%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22umS8Patjg6rcauILY0WFr7q3KAaQk5Ju%22%2C2592000%5D%22%3B%7D; advanced-frontend=sfh9l7pr25gtrp546hr051cb5t; _csrf-frontend=ce3bd25f4b566f0108d947947693b6cdcaa5d3fb19f2eff3d2630f7e5dd29569a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%228uDtDp4_RY2XVlL7uRJRsvPfP1CoxxMO%22%3B%7D'
+    'PATH' => 'C:\\Python39\\Scripts\\;C:\\Python39\\;c:\\Program Files\\Java\\jdk1.8.0_191\\bin;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\iCLS\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\iCLS\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\WINDOWS\\System32\\OpenSSH\\;\"C:\\Users\\admin\\Downloads\\JDK\\bin;\";C:\\Program Files\\nodejs\\;C:\\ProgramData\\chocolatey\\bin;C:\\Program Files\\Git\\cmd;D:\\Python\\Scripts\\;D:\\Python\\;C:\\Users\\admin\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\admin\\AppData\\Local\\Programs\\Microsoft VS Code\\bin;C:\\Users\\admin\\AppData\\Local\\GitHubDesktop\\bin;C:\\Program Files\\JetBrains\\WebStorm 2020.2.3\\bin;D:\\jsf\\php;C:\\Users\\admin\\AppData\\Roaming\\npm;C:\\Users\\admin\\AppData\\Local\\atom\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/jsf/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/jsf/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/jsf/htdocs/Yii1/frontend/web/index.php'
+    'REMOTE_PORT' => '56061'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=site%2Fresend-verification-email'
+    'REQUEST_URI' => '/yii1/frontend/web/index.php?r=site%2Fresend-verification-email'
+    'SCRIPT_NAME' => '/yii1/frontend/web/index.php'
+    'PHP_SELF' => '/yii1/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1606230819.02
+    'REQUEST_TIME' => 1606230819
+]
+2020-11-24 16:18:11 [::1][-][sfh9l7pr25gtrp546hr051cb5t][error][Swift_TransportException] Swift_TransportException: Failed to authenticate on SMTP server with username "phamthidieulinh24102000@gmail.com" using 3 possible authenticators. Authenticator LOGIN returned Expected response code 235 but got code "535", with message "535-5.7.8 Username and Password not accepted. Learn more at
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials y1sm14908091pfe.80 - gsmtp
+". Authenticator PLAIN returned Expected response code 235 but got code "535", with message "535-5.7.8 Username and Password not accepted. Learn more at
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials y1sm14908091pfe.80 - gsmtp
+". Authenticator XOAUTH2 returned Expected response code 250 but got code "535", with message "535-5.7.8 Username and Password not accepted. Learn more at
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials y1sm14908091pfe.80 - gsmtp
+". in D:\jsf\htdocs\Yii1\vendor\swiftmailer\swiftmailer\lib\classes\Swift\Transport\Esmtp\AuthHandler.php:191
+Stack trace:
+#0 D:\jsf\htdocs\Yii1\vendor\swiftmailer\swiftmailer\lib\classes\Swift\Transport\EsmtpTransport.php(371): Swift_Transport_Esmtp_AuthHandler->afterEhlo(Object(Swift_SmtpTransport))
+#1 D:\jsf\htdocs\Yii1\vendor\swiftmailer\swiftmailer\lib\classes\Swift\Transport\AbstractSmtpTransport.php(148): Swift_Transport_EsmtpTransport->doHeloCommand()
+#2 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2-swiftmailer\src\Mailer.php(113): Swift_Transport_AbstractSmtpTransport->start()
+#3 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2-swiftmailer\src\Mailer.php(156): yii\swiftmailer\Mailer->getSwiftMailer()
+#4 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\mail\BaseMailer.php(263): yii\swiftmailer\Mailer->sendMessage(Object(yii\swiftmailer\Message))
+#5 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\mail\BaseMessage.php(49): yii\mail\BaseMailer->send(Object(yii\swiftmailer\Message))
+#6 D:\jsf\htdocs\Yii1\frontend\models\ResendVerificationEmailForm.php(60): yii\mail\BaseMessage->send()
+#7 D:\jsf\htdocs\Yii1\frontend\controllers\SiteController.php(249): frontend\models\ResendVerificationEmailForm->sendEmail()
+#8 [internal function]: frontend\controllers\SiteController->actionResendVerificationEmail()
+#9 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#10 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\base\Controller.php(180): yii\base\InlineAction->runWithParams(Array)
+#11 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('resend-verifica...', Array)
+#12 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('site/resend-ver...', Array)
+#13 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#14 D:\jsf\htdocs\Yii1\frontend\web\index.php(17): yii\base\Application->run()
+#15 {main}
+2020-11-24 16:18:02 [::1][-][sfh9l7pr25gtrp546hr051cb5t][info][application] $_GET = [
+    'r' => 'site/resend-verification-email'
+]
+
+$_POST = [
+    '_csrf-frontend' => 'yrvQNl5Jlb8InQMveRoi539E4qy51NtjgbgV_XqCp8TyzpRCGjmh4FrEMXcvdm7QChao_sqiiwXRiVaSAvrqiw=='
+    'ResendVerificationEmailForm' => [
+        'email' => 'linh@mailinator.com'
+    ]
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    '_identity-frontend' => '58e5f35f6789d3c3355709121e7d9c466f4905a83ce51b860e306071e49f3f37a:2:{i:0;s:18:\"_identity-frontend\";i:1;s:46:\"[1,\"umS8Patjg6rcauILY0WFr7q3KAaQk5Ju\",2592000]\";}'
+    'advanced-frontend' => 'sfh9l7pr25gtrp546hr051cb5t'
+    '_csrf-frontend' => 'ce3bd25f4b566f0108d947947693b6cdcaa5d3fb19f2eff3d2630f7e5dd29569a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"8uDtDp4_RY2XVlL7uRJRsvPfP1CoxxMO\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__captcha/site/captcha' => 'mxnoda'
+    '__captcha/site/captchacount' => 1
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/jsf/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/jsf/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '168'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_ORIGIN' => 'http://localhost'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/yii1/frontend/web/index.php?r=site%2Fresend-verification-email'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'vi-VN,vi;q=0.9,fr-FR;q=0.8,fr;q=0.7,en-US;q=0.6,en;q=0.5'
+    'HTTP_COOKIE' => '_identity-frontend=58e5f35f6789d3c3355709121e7d9c466f4905a83ce51b860e306071e49f3f37a%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22umS8Patjg6rcauILY0WFr7q3KAaQk5Ju%22%2C2592000%5D%22%3B%7D; advanced-frontend=sfh9l7pr25gtrp546hr051cb5t; _csrf-frontend=ce3bd25f4b566f0108d947947693b6cdcaa5d3fb19f2eff3d2630f7e5dd29569a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%228uDtDp4_RY2XVlL7uRJRsvPfP1CoxxMO%22%3B%7D'
+    'PATH' => 'C:\\Python39\\Scripts\\;C:\\Python39\\;c:\\Program Files\\Java\\jdk1.8.0_191\\bin;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\iCLS\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\iCLS\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\WINDOWS\\System32\\OpenSSH\\;\"C:\\Users\\admin\\Downloads\\JDK\\bin;\";C:\\Program Files\\nodejs\\;C:\\ProgramData\\chocolatey\\bin;C:\\Program Files\\Git\\cmd;D:\\Python\\Scripts\\;D:\\Python\\;C:\\Users\\admin\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\admin\\AppData\\Local\\Programs\\Microsoft VS Code\\bin;C:\\Users\\admin\\AppData\\Local\\GitHubDesktop\\bin;C:\\Program Files\\JetBrains\\WebStorm 2020.2.3\\bin;D:\\jsf\\php;C:\\Users\\admin\\AppData\\Roaming\\npm;C:\\Users\\admin\\AppData\\Local\\atom\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/jsf/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/jsf/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/jsf/htdocs/Yii1/frontend/web/index.php'
+    'REMOTE_PORT' => '56088'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=site%2Fresend-verification-email'
+    'REQUEST_URI' => '/yii1/frontend/web/index.php?r=site%2Fresend-verification-email'
+    'SCRIPT_NAME' => '/yii1/frontend/web/index.php'
+    'PHP_SELF' => '/yii1/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1606231082.605
+    'REQUEST_TIME' => 1606231082
+]
+2020-11-24 16:21:04 [::1][-][sfh9l7pr25gtrp546hr051cb5t][error][Swift_TransportException] Swift_TransportException: Failed to authenticate on SMTP server with username "phamthidieulinh24102000@gmail.com" using 3 possible authenticators. Authenticator LOGIN returned Expected response code 235 but got code "535", with message "535-5.7.8 Username and Password not accepted. Learn more at
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials l10sm3716234pjg.3 - gsmtp
+". Authenticator PLAIN returned Expected response code 235 but got code "535", with message "535-5.7.8 Username and Password not accepted. Learn more at
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials l10sm3716234pjg.3 - gsmtp
+". Authenticator XOAUTH2 returned Expected response code 250 but got code "535", with message "535-5.7.8 Username and Password not accepted. Learn more at
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials l10sm3716234pjg.3 - gsmtp
+". in D:\jsf\htdocs\Yii1\vendor\swiftmailer\swiftmailer\lib\classes\Swift\Transport\Esmtp\AuthHandler.php:191
+Stack trace:
+#0 D:\jsf\htdocs\Yii1\vendor\swiftmailer\swiftmailer\lib\classes\Swift\Transport\EsmtpTransport.php(371): Swift_Transport_Esmtp_AuthHandler->afterEhlo(Object(Swift_SmtpTransport))
+#1 D:\jsf\htdocs\Yii1\vendor\swiftmailer\swiftmailer\lib\classes\Swift\Transport\AbstractSmtpTransport.php(148): Swift_Transport_EsmtpTransport->doHeloCommand()
+#2 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2-swiftmailer\src\Mailer.php(113): Swift_Transport_AbstractSmtpTransport->start()
+#3 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2-swiftmailer\src\Mailer.php(156): yii\swiftmailer\Mailer->getSwiftMailer()
+#4 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\mail\BaseMailer.php(263): yii\swiftmailer\Mailer->sendMessage(Object(yii\swiftmailer\Message))
+#5 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\mail\BaseMessage.php(49): yii\mail\BaseMailer->send(Object(yii\swiftmailer\Message))
+#6 D:\jsf\htdocs\Yii1\frontend\models\ResendVerificationEmailForm.php(60): yii\mail\BaseMessage->send()
+#7 D:\jsf\htdocs\Yii1\frontend\controllers\SiteController.php(249): frontend\models\ResendVerificationEmailForm->sendEmail()
+#8 [internal function]: frontend\controllers\SiteController->actionResendVerificationEmail()
+#9 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#10 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\base\Controller.php(180): yii\base\InlineAction->runWithParams(Array)
+#11 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('resend-verifica...', Array)
+#12 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('site/resend-ver...', Array)
+#13 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#14 D:\jsf\htdocs\Yii1\frontend\web\index.php(17): yii\base\Application->run()
+#15 {main}
+2020-11-24 16:20:55 [::1][-][sfh9l7pr25gtrp546hr051cb5t][info][application] $_GET = [
+    'r' => 'site/resend-verification-email'
+]
+
+$_POST = [
+    '_csrf-frontend' => 'J1wUGDOa-PNDeDY-CsLf6OYNr3-4FYVGFJbwabrT4ywfKVBsd-rMrBEhBGZcrpPfk1_lLctj1SBEp7MGwquuYw=='
+    'ResendVerificationEmailForm' => [
+        'email' => 'linh@mailinator.com'
+    ]
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    '_identity-frontend' => '58e5f35f6789d3c3355709121e7d9c466f4905a83ce51b860e306071e49f3f37a:2:{i:0;s:18:\"_identity-frontend\";i:1;s:46:\"[1,\"umS8Patjg6rcauILY0WFr7q3KAaQk5Ju\",2592000]\";}'
+    'advanced-frontend' => 'sfh9l7pr25gtrp546hr051cb5t'
+    '_csrf-frontend' => 'ce3bd25f4b566f0108d947947693b6cdcaa5d3fb19f2eff3d2630f7e5dd29569a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"8uDtDp4_RY2XVlL7uRJRsvPfP1CoxxMO\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__captcha/site/captcha' => 'mxnoda'
+    '__captcha/site/captchacount' => 1
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/jsf/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/jsf/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '168'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_ORIGIN' => 'http://localhost'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/yii1/frontend/web/index.php?r=site%2Fresend-verification-email'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'vi-VN,vi;q=0.9,fr-FR;q=0.8,fr;q=0.7,en-US;q=0.6,en;q=0.5'
+    'HTTP_COOKIE' => '_identity-frontend=58e5f35f6789d3c3355709121e7d9c466f4905a83ce51b860e306071e49f3f37a%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22umS8Patjg6rcauILY0WFr7q3KAaQk5Ju%22%2C2592000%5D%22%3B%7D; advanced-frontend=sfh9l7pr25gtrp546hr051cb5t; _csrf-frontend=ce3bd25f4b566f0108d947947693b6cdcaa5d3fb19f2eff3d2630f7e5dd29569a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%228uDtDp4_RY2XVlL7uRJRsvPfP1CoxxMO%22%3B%7D'
+    'PATH' => 'C:\\Python39\\Scripts\\;C:\\Python39\\;c:\\Program Files\\Java\\jdk1.8.0_191\\bin;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\iCLS\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\iCLS\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\WINDOWS\\System32\\OpenSSH\\;\"C:\\Users\\admin\\Downloads\\JDK\\bin;\";C:\\Program Files\\nodejs\\;C:\\ProgramData\\chocolatey\\bin;C:\\Program Files\\Git\\cmd;D:\\Python\\Scripts\\;D:\\Python\\;C:\\Users\\admin\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\admin\\AppData\\Local\\Programs\\Microsoft VS Code\\bin;C:\\Users\\admin\\AppData\\Local\\GitHubDesktop\\bin;C:\\Program Files\\JetBrains\\WebStorm 2020.2.3\\bin;D:\\jsf\\php;C:\\Users\\admin\\AppData\\Roaming\\npm;C:\\Users\\admin\\AppData\\Local\\atom\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/jsf/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/jsf/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/jsf/htdocs/Yii1/frontend/web/index.php'
+    'REMOTE_PORT' => '56105'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=site%2Fresend-verification-email'
+    'REQUEST_URI' => '/yii1/frontend/web/index.php?r=site%2Fresend-verification-email'
+    'SCRIPT_NAME' => '/yii1/frontend/web/index.php'
+    'PHP_SELF' => '/yii1/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1606231255.169
+    'REQUEST_TIME' => 1606231255
+]
+2020-11-24 16:26:00 [::1][-][sfh9l7pr25gtrp546hr051cb5t][error][yii\base\ViewNotFoundException] yii\base\ViewNotFoundException: The view file does not exist: D:\jsf\htdocs\Yii1\frontend/mail\emailVerify-html.php in D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\base\View.php:233
+Stack trace:
+#0 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile('D:\\jsf\\htdocs\\Y...', Array, Object(yii\swiftmailer\Mailer))
+#1 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\mail\BaseMailer.php(302): yii\base\View->render('emailVerify-htm...', Array, Object(yii\swiftmailer\Mailer))
+#2 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\mail\BaseMailer.php(188): yii\mail\BaseMailer->render('emailVerify-htm...', Array, 'layouts/html')
+#3 D:\jsf\htdocs\Yii1\frontend\models\ResendVerificationEmailForm.php(55): yii\mail\BaseMailer->compose(Array, Array)
+#4 D:\jsf\htdocs\Yii1\frontend\controllers\SiteController.php(249): frontend\models\ResendVerificationEmailForm->sendEmail()
+#5 [internal function]: frontend\controllers\SiteController->actionResendVerificationEmail()
+#6 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#7 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\base\Controller.php(180): yii\base\InlineAction->runWithParams(Array)
+#8 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('resend-verifica...', Array)
+#9 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('site/resend-ver...', Array)
+#10 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#11 D:\jsf\htdocs\Yii1\frontend\web\index.php(17): yii\base\Application->run()
+#12 {main}
+2020-11-24 16:26:00 [::1][-][sfh9l7pr25gtrp546hr051cb5t][info][application] $_GET = [
+    'r' => 'site/resend-verification-email'
+]
+
+$_POST = [
+    '_csrf-frontend' => 'CIFe57SCkLkVkmQ8uZBBxeufVY1CPKW4sN3E7jiO8EYw9BqT8PKk5kfLVmTv_A3yns0f3zFK9d7g7IeBQPa9CQ=='
+    'ResendVerificationEmailForm' => [
+        'email' => 'linh@mailinator.com'
+    ]
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    '_identity-frontend' => '58e5f35f6789d3c3355709121e7d9c466f4905a83ce51b860e306071e49f3f37a:2:{i:0;s:18:\"_identity-frontend\";i:1;s:46:\"[1,\"umS8Patjg6rcauILY0WFr7q3KAaQk5Ju\",2592000]\";}'
+    'advanced-frontend' => 'sfh9l7pr25gtrp546hr051cb5t'
+    '_csrf-frontend' => 'ce3bd25f4b566f0108d947947693b6cdcaa5d3fb19f2eff3d2630f7e5dd29569a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"8uDtDp4_RY2XVlL7uRJRsvPfP1CoxxMO\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__captcha/site/captcha' => 'mxnoda'
+    '__captcha/site/captchacount' => 1
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/jsf/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/jsf/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '168'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_ORIGIN' => 'http://localhost'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/yii1/frontend/web/index.php?r=site%2Fresend-verification-email'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'vi-VN,vi;q=0.9,fr-FR;q=0.8,fr;q=0.7,en-US;q=0.6,en;q=0.5'
+    'HTTP_COOKIE' => '_identity-frontend=58e5f35f6789d3c3355709121e7d9c466f4905a83ce51b860e306071e49f3f37a%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22umS8Patjg6rcauILY0WFr7q3KAaQk5Ju%22%2C2592000%5D%22%3B%7D; advanced-frontend=sfh9l7pr25gtrp546hr051cb5t; _csrf-frontend=ce3bd25f4b566f0108d947947693b6cdcaa5d3fb19f2eff3d2630f7e5dd29569a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%228uDtDp4_RY2XVlL7uRJRsvPfP1CoxxMO%22%3B%7D'
+    'PATH' => 'C:\\Python39\\Scripts\\;C:\\Python39\\;c:\\Program Files\\Java\\jdk1.8.0_191\\bin;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\iCLS\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\iCLS\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\WINDOWS\\System32\\OpenSSH\\;\"C:\\Users\\admin\\Downloads\\JDK\\bin;\";C:\\Program Files\\nodejs\\;C:\\ProgramData\\chocolatey\\bin;C:\\Program Files\\Git\\cmd;D:\\Python\\Scripts\\;D:\\Python\\;C:\\Users\\admin\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\admin\\AppData\\Local\\Programs\\Microsoft VS Code\\bin;C:\\Users\\admin\\AppData\\Local\\GitHubDesktop\\bin;C:\\Program Files\\JetBrains\\WebStorm 2020.2.3\\bin;D:\\jsf\\php;C:\\Users\\admin\\AppData\\Roaming\\npm;C:\\Users\\admin\\AppData\\Local\\atom\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/jsf/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/jsf/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/jsf/htdocs/Yii1/frontend/web/index.php'
+    'REMOTE_PORT' => '56174'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=site%2Fresend-verification-email'
+    'REQUEST_URI' => '/yii1/frontend/web/index.php?r=site%2Fresend-verification-email'
+    'SCRIPT_NAME' => '/yii1/frontend/web/index.php'
+    'PHP_SELF' => '/yii1/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1606231560.495
+    'REQUEST_TIME' => 1606231560
+]
+2020-11-24 16:30:26 [::1][-][sfh9l7pr25gtrp546hr051cb5t][error][Swift_TransportException] Swift_TransportException: Failed to authenticate on SMTP server with username "phamthidieulinh24102000@gmail.com" using 3 possible authenticators. Authenticator LOGIN returned Expected response code 235 but got code "535", with message "535-5.7.8 Username and Password not accepted. Learn more at
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials c22sm15055543pfo.211 - gsmtp
+". Authenticator PLAIN returned Expected response code 235 but got code "535", with message "535-5.7.8 Username and Password not accepted. Learn more at
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials c22sm15055543pfo.211 - gsmtp
+". Authenticator XOAUTH2 returned Expected response code 250 but got code "535", with message "535-5.7.8 Username and Password not accepted. Learn more at
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials c22sm15055543pfo.211 - gsmtp
+". in D:\jsf\htdocs\Yii1\vendor\swiftmailer\swiftmailer\lib\classes\Swift\Transport\Esmtp\AuthHandler.php:191
+Stack trace:
+#0 D:\jsf\htdocs\Yii1\vendor\swiftmailer\swiftmailer\lib\classes\Swift\Transport\EsmtpTransport.php(371): Swift_Transport_Esmtp_AuthHandler->afterEhlo(Object(Swift_SmtpTransport))
+#1 D:\jsf\htdocs\Yii1\vendor\swiftmailer\swiftmailer\lib\classes\Swift\Transport\AbstractSmtpTransport.php(148): Swift_Transport_EsmtpTransport->doHeloCommand()
+#2 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2-swiftmailer\src\Mailer.php(113): Swift_Transport_AbstractSmtpTransport->start()
+#3 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2-swiftmailer\src\Mailer.php(156): yii\swiftmailer\Mailer->getSwiftMailer()
+#4 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\mail\BaseMailer.php(263): yii\swiftmailer\Mailer->sendMessage(Object(yii\swiftmailer\Message))
+#5 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\mail\BaseMessage.php(49): yii\mail\BaseMailer->send(Object(yii\swiftmailer\Message))
+#6 D:\jsf\htdocs\Yii1\frontend\models\SignupForm.php(77): yii\mail\BaseMessage->send()
+#7 D:\jsf\htdocs\Yii1\frontend\models\SignupForm.php(57): frontend\models\SignupForm->sendEmail(Object(common\models\User))
+#8 D:\jsf\htdocs\Yii1\frontend\controllers\SiteController.php(156): frontend\models\SignupForm->signup()
+#9 [internal function]: frontend\controllers\SiteController->actionSignup()
+#10 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#11 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\base\Controller.php(180): yii\base\InlineAction->runWithParams(Array)
+#12 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('signup', Array)
+#13 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('site/signup', Array)
+#14 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#15 D:\jsf\htdocs\Yii1\frontend\web\index.php(17): yii\base\Application->run()
+#16 {main}
+2020-11-24 16:30:17 [::1][-][sfh9l7pr25gtrp546hr051cb5t][info][application] $_GET = [
+    'r' => 'site/signup'
+]
+
+$_POST = [
+    '_csrf-frontend' => 'a3PNRW4v4ob0mfVzTOHRfGLowl6MvpAZ1uqzBVK_2ZBTBokxKl_W2abAxysajZ1LF7qIDP_IwH-G2_BqKseU3w=='
+    'SignupForm' => [
+        'username' => 'admin'
+        'email' => 'linh@gmail.com'
+        'password' => 'Linh241@'
+    ]
+    'signup-button' => ''
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    '_identity-frontend' => '58e5f35f6789d3c3355709121e7d9c466f4905a83ce51b860e306071e49f3f37a:2:{i:0;s:18:\"_identity-frontend\";i:1;s:46:\"[1,\"umS8Patjg6rcauILY0WFr7q3KAaQk5Ju\",2592000]\";}'
+    'advanced-frontend' => 'sfh9l7pr25gtrp546hr051cb5t'
+    '_csrf-frontend' => 'ce3bd25f4b566f0108d947947693b6cdcaa5d3fb19f2eff3d2630f7e5dd29569a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"8uDtDp4_RY2XVlL7uRJRsvPfP1CoxxMO\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__captcha/site/captcha' => 'mxnoda'
+    '__captcha/site/captchacount' => 1
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/jsf/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/jsf/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '228'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_ORIGIN' => 'http://localhost'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/yii1/frontend/web/index.php?r=site%2Fsignup'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'vi-VN,vi;q=0.9,fr-FR;q=0.8,fr;q=0.7,en-US;q=0.6,en;q=0.5'
+    'HTTP_COOKIE' => '_identity-frontend=58e5f35f6789d3c3355709121e7d9c466f4905a83ce51b860e306071e49f3f37a%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22umS8Patjg6rcauILY0WFr7q3KAaQk5Ju%22%2C2592000%5D%22%3B%7D; advanced-frontend=sfh9l7pr25gtrp546hr051cb5t; _csrf-frontend=ce3bd25f4b566f0108d947947693b6cdcaa5d3fb19f2eff3d2630f7e5dd29569a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%228uDtDp4_RY2XVlL7uRJRsvPfP1CoxxMO%22%3B%7D'
+    'PATH' => 'C:\\Python39\\Scripts\\;C:\\Python39\\;c:\\Program Files\\Java\\jdk1.8.0_191\\bin;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\iCLS\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\iCLS\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\WINDOWS\\System32\\OpenSSH\\;\"C:\\Users\\admin\\Downloads\\JDK\\bin;\";C:\\Program Files\\nodejs\\;C:\\ProgramData\\chocolatey\\bin;C:\\Program Files\\Git\\cmd;D:\\Python\\Scripts\\;D:\\Python\\;C:\\Users\\admin\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\admin\\AppData\\Local\\Programs\\Microsoft VS Code\\bin;C:\\Users\\admin\\AppData\\Local\\GitHubDesktop\\bin;C:\\Program Files\\JetBrains\\WebStorm 2020.2.3\\bin;D:\\jsf\\php;C:\\Users\\admin\\AppData\\Roaming\\npm;C:\\Users\\admin\\AppData\\Local\\atom\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/jsf/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/jsf/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/jsf/htdocs/Yii1/frontend/web/index.php'
+    'REMOTE_PORT' => '56231'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=site%2Fsignup'
+    'REQUEST_URI' => '/yii1/frontend/web/index.php?r=site%2Fsignup'
+    'SCRIPT_NAME' => '/yii1/frontend/web/index.php'
+    'PHP_SELF' => '/yii1/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1606231817.125
+    'REQUEST_TIME' => 1606231817
+]
+2020-11-24 16:37:07 [::1][-][sfh9l7pr25gtrp546hr051cb5t][error][Swift_TransportException] Swift_TransportException: Failed to authenticate on SMTP server with username "phamthidieulinh24102000@gmail.com" using 3 possible authenticators. Authenticator LOGIN returned Expected response code 235 but got code "535", with message "535-5.7.8 Username and Password not accepted. Learn more at
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials z9sm3917368pji.48 - gsmtp
+". Authenticator PLAIN returned Expected response code 235 but got code "535", with message "535-5.7.8 Username and Password not accepted. Learn more at
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials z9sm3917368pji.48 - gsmtp
+". Authenticator XOAUTH2 returned Expected response code 250 but got code "535", with message "535-5.7.8 Username and Password not accepted. Learn more at
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials z9sm3917368pji.48 - gsmtp
+". in D:\jsf\htdocs\Yii1\vendor\swiftmailer\swiftmailer\lib\classes\Swift\Transport\Esmtp\AuthHandler.php:191
+Stack trace:
+#0 D:\jsf\htdocs\Yii1\vendor\swiftmailer\swiftmailer\lib\classes\Swift\Transport\EsmtpTransport.php(371): Swift_Transport_Esmtp_AuthHandler->afterEhlo(Object(Swift_SmtpTransport))
+#1 D:\jsf\htdocs\Yii1\vendor\swiftmailer\swiftmailer\lib\classes\Swift\Transport\AbstractSmtpTransport.php(148): Swift_Transport_EsmtpTransport->doHeloCommand()
+#2 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2-swiftmailer\src\Mailer.php(113): Swift_Transport_AbstractSmtpTransport->start()
+#3 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2-swiftmailer\src\Mailer.php(156): yii\swiftmailer\Mailer->getSwiftMailer()
+#4 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\mail\BaseMailer.php(263): yii\swiftmailer\Mailer->sendMessage(Object(yii\swiftmailer\Message))
+#5 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\mail\BaseMessage.php(49): yii\mail\BaseMailer->send(Object(yii\swiftmailer\Message))
+#6 D:\jsf\htdocs\Yii1\frontend\models\SignupForm.php(74): yii\mail\BaseMessage->send()
+#7 D:\jsf\htdocs\Yii1\frontend\models\SignupForm.php(57): frontend\models\SignupForm->sendEmail(Object(common\models\User))
+#8 D:\jsf\htdocs\Yii1\frontend\controllers\SiteController.php(156): frontend\models\SignupForm->signup()
+#9 [internal function]: frontend\controllers\SiteController->actionSignup()
+#10 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#11 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\base\Controller.php(180): yii\base\InlineAction->runWithParams(Array)
+#12 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('signup', Array)
+#13 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('site/signup', Array)
+#14 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#15 D:\jsf\htdocs\Yii1\frontend\web\index.php(17): yii\base\Application->run()
+#16 {main}
+2020-11-24 16:36:57 [::1][-][sfh9l7pr25gtrp546hr051cb5t][info][application] $_GET = [
+    'r' => 'site/signup'
+]
+
+$_POST = [
+    '_csrf-frontend' => 'Iq94vxEivtFLfOUoHHw12hPUju3BKoFlCdD5tMfhbhga2jzLVVKKjhkl13BKEHntZobEv7Jc0QNZ4brbv5kjVw=='
+    'SignupForm' => [
+        'username' => 'admin'
+        'email' => 'linh@mailinator.com'
+        'password' => 'Linh241@'
+    ]
+    'signup-button' => ''
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    '_identity-frontend' => '58e5f35f6789d3c3355709121e7d9c466f4905a83ce51b860e306071e49f3f37a:2:{i:0;s:18:\"_identity-frontend\";i:1;s:46:\"[1,\"umS8Patjg6rcauILY0WFr7q3KAaQk5Ju\",2592000]\";}'
+    'advanced-frontend' => 'sfh9l7pr25gtrp546hr051cb5t'
+    '_csrf-frontend' => 'ce3bd25f4b566f0108d947947693b6cdcaa5d3fb19f2eff3d2630f7e5dd29569a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"8uDtDp4_RY2XVlL7uRJRsvPfP1CoxxMO\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__captcha/site/captcha' => 'mxnoda'
+    '__captcha/site/captchacount' => 1
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/jsf/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/jsf/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '233'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_ORIGIN' => 'http://localhost'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/yii1/frontend/web/index.php?r=site%2Fsignup'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'vi-VN,vi;q=0.9,fr-FR;q=0.8,fr;q=0.7,en-US;q=0.6,en;q=0.5'
+    'HTTP_COOKIE' => '_identity-frontend=58e5f35f6789d3c3355709121e7d9c466f4905a83ce51b860e306071e49f3f37a%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22umS8Patjg6rcauILY0WFr7q3KAaQk5Ju%22%2C2592000%5D%22%3B%7D; advanced-frontend=sfh9l7pr25gtrp546hr051cb5t; _csrf-frontend=ce3bd25f4b566f0108d947947693b6cdcaa5d3fb19f2eff3d2630f7e5dd29569a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%228uDtDp4_RY2XVlL7uRJRsvPfP1CoxxMO%22%3B%7D'
+    'PATH' => 'C:\\Python39\\Scripts\\;C:\\Python39\\;c:\\Program Files\\Java\\jdk1.8.0_191\\bin;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\iCLS\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\iCLS\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\WINDOWS\\System32\\OpenSSH\\;\"C:\\Users\\admin\\Downloads\\JDK\\bin;\";C:\\Program Files\\nodejs\\;C:\\ProgramData\\chocolatey\\bin;C:\\Program Files\\Git\\cmd;D:\\Python\\Scripts\\;D:\\Python\\;C:\\Users\\admin\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\admin\\AppData\\Local\\Programs\\Microsoft VS Code\\bin;C:\\Users\\admin\\AppData\\Local\\GitHubDesktop\\bin;C:\\Program Files\\JetBrains\\WebStorm 2020.2.3\\bin;D:\\jsf\\php;C:\\Users\\admin\\AppData\\Roaming\\npm;C:\\Users\\admin\\AppData\\Local\\atom\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/jsf/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/jsf/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/jsf/htdocs/Yii1/frontend/web/index.php'
+    'REMOTE_PORT' => '56309'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=site%2Fsignup'
+    'REQUEST_URI' => '/yii1/frontend/web/index.php?r=site%2Fsignup'
+    'SCRIPT_NAME' => '/yii1/frontend/web/index.php'
+    'PHP_SELF' => '/yii1/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1606232217.9
+    'REQUEST_TIME' => 1606232217
+]
+2020-11-24 17:09:47 [::1][5][ohg39cfjd18gprc3i38hjdkc0n][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "product". in D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\base\Module.php:537
+Stack trace:
+#0 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('product', Array)
+#1 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 D:\jsf\htdocs\Yii1\frontend\web\index.php(17): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\web\Application.php:115
+Stack trace:
+#0 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 D:\jsf\htdocs\Yii1\frontend\web\index.php(17): yii\base\Application->run()
+#2 {main}
+2020-11-24 17:09:47 [::1][5][ohg39cfjd18gprc3i38hjdkc0n][info][application] $_GET = [
+    'r' => 'product'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-frontend' => 'ohg39cfjd18gprc3i38hjdkc0n'
+    '_identity-frontend' => '7051843d21ca6b2d17261cd6997e9aab31f47ba5458edd5ae3ccc7684972e8c7a:2:{i:0;s:18:\"_identity-frontend\";i:1;s:46:\"[5,\"dO2F4u6D5XkuLitR7mqbRjjJ9vmgOma8\",2592000]\";}'
+    '_csrf-frontend' => '4a8516b6782504295abc031f874be3cd34d044d07973b953b47deed703485626a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"5qVDBnfy-F4oHsel1yzl7FLj_S72mmUy\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 5
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/jsf/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/jsf/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'vi-VN,vi;q=0.9,fr-FR;q=0.8,fr;q=0.7,en-US;q=0.6,en;q=0.5'
+    'HTTP_COOKIE' => 'advanced-frontend=ohg39cfjd18gprc3i38hjdkc0n; _identity-frontend=7051843d21ca6b2d17261cd6997e9aab31f47ba5458edd5ae3ccc7684972e8c7a%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A46%3A%22%5B5%2C%22dO2F4u6D5XkuLitR7mqbRjjJ9vmgOma8%22%2C2592000%5D%22%3B%7D; _csrf-frontend=4a8516b6782504295abc031f874be3cd34d044d07973b953b47deed703485626a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%225qVDBnfy-F4oHsel1yzl7FLj_S72mmUy%22%3B%7D'
+    'PATH' => 'C:\\Python39\\Scripts\\;C:\\Python39\\;c:\\Program Files\\Java\\jdk1.8.0_191\\bin;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\iCLS\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\iCLS\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\WINDOWS\\System32\\OpenSSH\\;\"C:\\Users\\admin\\Downloads\\JDK\\bin;\";C:\\Program Files\\nodejs\\;C:\\ProgramData\\chocolatey\\bin;C:\\Program Files\\Git\\cmd;D:\\Python\\Scripts\\;D:\\Python\\;C:\\Users\\admin\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\admin\\AppData\\Local\\Programs\\Microsoft VS Code\\bin;C:\\Users\\admin\\AppData\\Local\\GitHubDesktop\\bin;C:\\Program Files\\JetBrains\\WebStorm 2020.2.3\\bin;D:\\jsf\\php;C:\\Users\\admin\\AppData\\Roaming\\npm;C:\\Users\\admin\\AppData\\Local\\atom\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/jsf/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/jsf/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/jsf/htdocs/Yii1/frontend/web/index.php'
+    'REMOTE_PORT' => '56720'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=product'
+    'REQUEST_URI' => '/yii1/frontend/web/index.php?r=product'
+    'SCRIPT_NAME' => '/yii1/frontend/web/index.php'
+    'PHP_SELF' => '/yii1/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1606234187.387
+    'REQUEST_TIME' => 1606234187
+]
+2020-11-29 07:32:24 [::1][1][k2obogd9r1riiuu5jhp53q65vu][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "product". in D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\base\Module.php:537
+Stack trace:
+#0 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('product', Array)
+#1 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 D:\jsf\htdocs\Yii1\frontend\web\index.php(17): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\web\Application.php:115
+Stack trace:
+#0 D:\jsf\htdocs\Yii1\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 D:\jsf\htdocs\Yii1\frontend\web\index.php(17): yii\base\Application->run()
+#2 {main}
+2020-11-29 07:32:24 [::1][1][k2obogd9r1riiuu5jhp53q65vu][info][application] $_GET = [
+    'r' => 'product'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-backend' => 'r4fqk6qfeevimntnuoa46pn996'
+    '_csrf-backend' => 'bc104d25881205f2f60148cf4c349107c5931405f33f11d92bc3480c4672f6b1a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"XWPpJVpD0axkuPCzTgg7H8b5xTtRKay8\";}'
+    'advanced-frontend' => 'k2obogd9r1riiuu5jhp53q65vu'
+    '_csrf-frontend' => 'ce9665d23ae7ac799c8b6dc1255cc80874112a3322dbe609b9c1bd0676b44a4aa:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"fi2irESJ62d87322s4lwE1SqvhQeOVi1\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 1
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/jsf/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/jsf/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'vi-VN,vi;q=0.9,fr-FR;q=0.8,fr;q=0.7,en-US;q=0.6,en;q=0.5'
+    'HTTP_COOKIE' => 'advanced-backend=r4fqk6qfeevimntnuoa46pn996; _csrf-backend=bc104d25881205f2f60148cf4c349107c5931405f33f11d92bc3480c4672f6b1a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22XWPpJVpD0axkuPCzTgg7H8b5xTtRKay8%22%3B%7D; advanced-frontend=k2obogd9r1riiuu5jhp53q65vu; _csrf-frontend=ce9665d23ae7ac799c8b6dc1255cc80874112a3322dbe609b9c1bd0676b44a4aa%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22fi2irESJ62d87322s4lwE1SqvhQeOVi1%22%3B%7D'
+    'PATH' => 'C:\\Python39\\Scripts\\;C:\\Python39\\;c:\\Program Files\\Java\\jdk1.8.0_191\\bin;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\iCLS\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\iCLS\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\WINDOWS\\System32\\OpenSSH\\;\"C:\\Users\\admin\\Downloads\\JDK\\bin;\";C:\\Program Files\\nodejs\\;C:\\ProgramData\\chocolatey\\bin;C:\\Program Files\\Git\\cmd;D:\\Python\\Scripts\\;D:\\Python\\;C:\\Users\\admin\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\admin\\AppData\\Local\\Programs\\Microsoft VS Code\\bin;C:\\Users\\admin\\AppData\\Local\\GitHubDesktop\\bin;C:\\Program Files\\JetBrains\\WebStorm 2020.2.3\\bin;D:\\jsf\\php;C:\\Users\\admin\\AppData\\Roaming\\npm;C:\\Users\\admin\\AppData\\Local\\atom\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/jsf/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/jsf/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/jsf/htdocs/Yii1/frontend/web/index.php'
+    'REMOTE_PORT' => '63613'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=product'
+    'REQUEST_URI' => '/yii1/frontend/web/index.php?r=product'
+    'SCRIPT_NAME' => '/yii1/frontend/web/index.php'
+    'PHP_SELF' => '/yii1/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1606631544.877
+    'REQUEST_TIME' => 1606631544
+]
+2021-01-17 05:34:25 [::1][-][j551fs5fj7k968fkpno5o7hrsi][error][Swift_TransportException] Swift_TransportException: Failed to authenticate on SMTP server with username "nhom14.se05@gmail.com" using 3 possible authenticators. Authenticator LOGIN returned Expected response code 235 but got code "535", with message "535-5.7.8 Username and Password not accepted. Learn more at
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials m10sm11826921pjn.53 - gsmtp
+". Authenticator PLAIN returned Expected response code 235 but got code "535", with message "535-5.7.8 Username and Password not accepted. Learn more at
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials m10sm11826921pjn.53 - gsmtp
+". Authenticator XOAUTH2 returned Expected response code 250 but got code "535", with message "535-5.7.8 Username and Password not accepted. Learn more at
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials m10sm11826921pjn.53 - gsmtp
+". in D:\jsf\htdocs\Yii2\vendor\swiftmailer\swiftmailer\lib\classes\Swift\Transport\Esmtp\AuthHandler.php:191
+Stack trace:
+#0 D:\jsf\htdocs\Yii2\vendor\swiftmailer\swiftmailer\lib\classes\Swift\Transport\EsmtpTransport.php(371): Swift_Transport_Esmtp_AuthHandler->afterEhlo(Object(Swift_SmtpTransport))
+#1 D:\jsf\htdocs\Yii2\vendor\swiftmailer\swiftmailer\lib\classes\Swift\Transport\AbstractSmtpTransport.php(148): Swift_Transport_EsmtpTransport->doHeloCommand()
+#2 D:\jsf\htdocs\Yii2\vendor\yiisoft\yii2-swiftmailer\src\Mailer.php(113): Swift_Transport_AbstractSmtpTransport->start()
+#3 D:\jsf\htdocs\Yii2\vendor\yiisoft\yii2-swiftmailer\src\Mailer.php(156): yii\swiftmailer\Mailer->getSwiftMailer()
+#4 D:\jsf\htdocs\Yii2\vendor\yiisoft\yii2\mail\BaseMailer.php(263): yii\swiftmailer\Mailer->sendMessage(Object(yii\swiftmailer\Message))
+#5 D:\jsf\htdocs\Yii2\vendor\yiisoft\yii2\mail\BaseMessage.php(49): yii\mail\BaseMailer->send(Object(yii\swiftmailer\Message))
+#6 D:\jsf\htdocs\Yii2\frontend\models\PasswordResetRequestForm.php(66): yii\mail\BaseMessage->send()
+#7 D:\jsf\htdocs\Yii2\frontend\controllers\SiteController.php(175): frontend\models\PasswordResetRequestForm->sendEmail()
+#8 [internal function]: frontend\controllers\SiteController->actionRequestPasswordReset()
+#9 D:\jsf\htdocs\Yii2\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#10 D:\jsf\htdocs\Yii2\vendor\yiisoft\yii2\base\Controller.php(180): yii\base\InlineAction->runWithParams(Array)
+#11 D:\jsf\htdocs\Yii2\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('request-passwor...', Array)
+#12 D:\jsf\htdocs\Yii2\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('site/request-pa...', Array)
+#13 D:\jsf\htdocs\Yii2\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#14 D:\jsf\htdocs\Yii2\frontend\web\index.php(17): yii\base\Application->run()
+#15 {main}
+2021-01-17 05:34:17 [::1][-][j551fs5fj7k968fkpno5o7hrsi][info][application] $_GET = [
+    'r' => 'site/request-password-reset'
+]
+
+$_POST = [
+    '_csrf-frontend' => '2ER_1PZDB8gMXXT5aVXay1HfUJFWc2dbI4ndey9YmlipfQizqXU3sDQsIMowPo2yNpkX-hc4AzhW65UQWAijHg=='
+    'PasswordResetRequestForm' => [
+        'email' => 'admin@mailinator.com'
+    ]
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf-backend' => 'e3be1bf6bc56c2f650c0684529ce9fdee53d7a7fb895ecd31157f1258e494239a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"2lZV3CWjENSMQoDIjyeP1Z0PtAhltK4j\";}'
+    'advanced-backend' => 'cc3j6h8jer46vb849ti9tbascu'
+    'advanced-frontend' => 'j551fs5fj7k968fkpno5o7hrsi'
+    '_csrf-frontend' => '669e2b5beacaf77103185f1e28e2dd3a5884a8c370710b266fe01676ed9126baa:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"q9wg_60x8qT3YkWygFGkAKdcubHkwP9F\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/jsf/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/jsf/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '166'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_SEC_CH_UA' => '\"Google Chrome\";v=\"87\", \" Not;A Brand\";v=\"99\", \"Chromium\";v=\"87\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_ORIGIN' => 'http://localhost'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.141 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/yii2/frontend/web/index.php?r=site%2Frequest-password-reset'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'vi-VN,vi;q=0.9,fr-FR;q=0.8,fr;q=0.7,en-US;q=0.6,en;q=0.5'
+    'HTTP_COOKIE' => '_csrf-backend=e3be1bf6bc56c2f650c0684529ce9fdee53d7a7fb895ecd31157f1258e494239a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%222lZV3CWjENSMQoDIjyeP1Z0PtAhltK4j%22%3B%7D; advanced-backend=cc3j6h8jer46vb849ti9tbascu; advanced-frontend=j551fs5fj7k968fkpno5o7hrsi; _csrf-frontend=669e2b5beacaf77103185f1e28e2dd3a5884a8c370710b266fe01676ed9126baa%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22q9wg_60x8qT3YkWygFGkAKdcubHkwP9F%22%3B%7D'
+    'PATH' => 'c:\\Program Files\\Java\\jdk1.8.0_191\\bin;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\iCLS\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\iCLS\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\WINDOWS\\System32\\OpenSSH\\;\"C:\\Users\\admin\\Downloads\\JDK\\bin;\";C:\\Program Files\\nodejs\\;C:\\ProgramData\\chocolatey\\bin;C:\\Program Files\\Git\\cmd;C:\\ProgramData\\ComposerSetup\\bin;C:\\Python39;C:\\Python39\\Scripts;D:\\Python\\Scripts\\;D:\\Python\\;C:\\Users\\admin\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\admin\\AppData\\Local\\GitHubDesktop\\bin;C:\\Program Files\\JetBrains\\WebStorm 2020.2.3\\bin;D:\\jsf\\php;C:\\Users\\admin\\AppData\\Roaming\\npm;C:\\Users\\admin\\AppData\\Local\\atom\\bin;C:\\Users\\admin\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Users\\admin\\AppData\\Local\\Programs\\Microsoft VS Code\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.3.9'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/jsf/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/jsf/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/jsf/htdocs/Yii2/frontend/web/index.php'
+    'REMOTE_PORT' => '52317'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=site%2Frequest-password-reset'
+    'REQUEST_URI' => '/yii2/frontend/web/index.php?r=site%2Frequest-password-reset'
+    'SCRIPT_NAME' => '/yii2/frontend/web/index.php'
+    'PHP_SELF' => '/yii2/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1610858057.817
+    'REQUEST_TIME' => 1610858057
+]

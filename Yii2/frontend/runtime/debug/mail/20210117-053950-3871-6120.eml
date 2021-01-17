@@ -1,0 +1,55 @@
+Message-ID: <2e4a8b2dc339e1a83f40a12fcc2bb82d@localhost>
+Date: Sun, 17 Jan 2021 05:39:46 +0100
+Subject: Password reset for My Application
+From: My Application robot <support@example.com>
+To: admin@mailinator.com
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="_=_swift_1610858386_44d8af2b010b08d5b3e308ea705f6752_=_"
+
+
+--_=_swift_1610858386_44d8af2b010b08d5b3e308ea705f6752_=_
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+
+Hello admin,
+
+Follow the link below to reset your password:
+
+htt=
+p://localhost/yii2/frontend/web/index.php?r=3Dsite%2Freset-password&token=
+=3D4j1CWwMUmdRUNf2oIKXstwPfny8BYMig_1610858057
+
+--_=_swift_1610858386_44d8af2b010b08d5b3e308ea705f6752_=_
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org=
+/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns=3D"http://www.w3.org/1999/=
+xhtml">
+<head>
+    <meta http-equiv=3D"Content-Type" content=3D"text/ht=
+ml; charset=3DUTF-8" />
+    <title></title>
+    </head>
+<body>
+    =
+    <div class=3D"password-reset">
+    <p>Hello admin,</p>
+
+    <p>Fo=
+llow the link below to reset your password:</p>
+
+    <p><a href=3D"http=
+://localhost/yii2/frontend/web/index.php?r=3Dsite%2Freset-password&amp;toke=
+n=3D4j1CWwMUmdRUNf2oIKXstwPfny8BYMig_1610858057">http://localhost/yii2/fron=
+tend/web/index.php?r=3Dsite%2Freset-password&amp;token=3D4j1CWwMUmdRUNf2oIK=
+XstwPfny8BYMig_1610858057</a></p>
+</div>
+    </body>
+</html>
+
+
+--_=_swift_1610858386_44d8af2b010b08d5b3e308ea705f6752_=_--

@@ -1,0 +1,55 @@
+Message-ID: <cd3b978b7bbec83989d35fdb99cd4eb8@localhost>
+Date: Sun, 29 Nov 2020 14:50:54 +0100
+Subject: Account registration at My Application
+From: phamthidieulinh24102000@gmail.com
+To: kien@mailinator.com
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="_=_swift_1606657854_0746af67273a1966520ead8a66f99f22_=_"
+
+
+--_=_swift_1606657854_0746af67273a1966520ead8a66f99f22_=_
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+
+Hello Ki=C3=AAn,
+
+Follow the link below to verify your email:
+
+h=
+ttp://localhost/yii1/frontend/web/index.php?r=3Dsite%2Fverify-email&token=
+=3DMUWIYQe0bW4SQ2jT1cnEXUeRQaS6CaG5_1606657854
+
+--_=_swift_1606657854_0746af67273a1966520ead8a66f99f22_=_
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org=
+/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns=3D"http://www.w3.org/1999/=
+xhtml">
+<head>
+    <meta http-equiv=3D"Content-Type" content=3D"text/ht=
+ml; charset=3DUTF-8" />
+    <title></title>
+    </head>
+<body>
+    =
+    <div class=3D"verify-email">
+    <p>Hello Ki=C3=AAn,</p>
+
+    <p>=
+Follow the link below to verify your email:</p>
+
+    <p><a href=3D"http=
+://localhost/yii1/frontend/web/index.php?r=3Dsite%2Fverify-email&amp;token=
+=3DMUWIYQe0bW4SQ2jT1cnEXUeRQaS6CaG5_1606657854">http://localhost/yii1/front=
+end/web/index.php?r=3Dsite%2Fverify-email&amp;token=3DMUWIYQe0bW4SQ2jT1cnEX=
+UeRQaS6CaG5_1606657854</a></p>
+</div>
+    </body>
+</html>
+
+
+--_=_swift_1606657854_0746af67273a1966520ead8a66f99f22_=_--
