@@ -1,11 +1,12 @@
 # SE05-Nhom14
 # Nhóm 14. Lưu thông tin editor của model-viewer vào 1 server được viết bằng PHP/Yii2/MySQL
-**1.Thành viên:**
+**Thành viên:**
 - Trần Hoàng Đức  - 18001033 -  K63A5 - HUS
 - Nguyễn Minh Kiên - 18001049 - K63A5 - HUS
 - Phạm Thị Diệu Linh - 18001055 - K63A5 - HUS
 
-**2.Nhiệm vụ**
+## Nhiệm vụ
+
 - Tìm hiểu các ngôn ngữ lập trình Web như HTML/CSS/JavaScript/PHP.
 - Tìm hiểu về Yii2 Framework.
 - Cài đặt Yii2 Framework.
@@ -20,21 +21,37 @@
 - Tìm hiểu về phân quyền RBAC trong yii2 Framework.
 
 
-**3.Công cụ, ngôn ngữ sử dụng:**
-- IDE : Sublime Text 3, Microsoft Visual Studio.
-- Framework : Yii2.
-- Hệ quản trị cơ sở dữ liệu : MySQL.
-- Ngôn ngữ : HTML, CSS, JS, PHP, TypeScript.
-- Hệ điều hành : Windows.
-- Công cụ hỗ trợ khác : Xampp.
+## Công cụ, ngôn ngữ sử dụng:
+
+**IDE:** 
+- Sublime Text 3 
+- Microsoft Visual Studio.
+
+**Framework:** 
+- Yii2
+
+**Hệ quản trị cơ sở dữ liệu :** 
+- MySQL.
+
+**Ngôn ngữ :**
+- HTML
+- CSS
+- JavaScript
+- PHP
+- TypeScript.
+
+**Hệ điều hành :**
+- Windows.
 
 
-**4.Định hướng phát triển:**
+## Định hướng phát triển:
+
 - Tạo thêm các chức năng mới hơn như hiển thị thông tin người mua hàng.
-- Thay đổi giao diện, hình nền, hiệu ứng thêm đẹp và sinh động hơn.
+- Thay đổi giao diện, hình nền 
 
 
-**5.Các nguồn tham khảo**
+## Các nguồn tham khảo:
+
 - Tài liệu Yii2: https://www.youtube.com/watch?v=z1xtFbO9jgQ&list=PLRd0zhQj3CBmusDbBzFgg3H20VxLx2mkF
 - Tài liệu PHP: https://www.w3schools.com/php/default.asp
 - Tài liệu PHP MySQL: https://www.w3schools.com/php/php_mysql_intro.asp
